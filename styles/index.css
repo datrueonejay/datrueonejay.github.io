@@ -24,6 +24,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   height: 15vh;
+  justify-content: space-around;
 }
 
 .headingSection {
@@ -44,10 +45,40 @@ img {
   flex-grow: 1;
 }
 
-#fgl {
-  display: inline-flex;
+#fb {
+  background-image: url("../images/facebookIcon.png");
 }
 
+#linkedIn {
+  background-image: url("../images/linkedinIcon.png");
+}
+
+#github {
+  background-image: url("../images/githubIcon.png")
+}
+
+#facts {
+  margin-top: 1.5vh;
+  width: 100%;
+  background-color: #374785;
+  padding: 1vmin;
+  font-size: 3vmin;
+}
+
+#factsTitle {
+  text-align: center;
+}
+
+.skillsList {
+  font-size: 2.5vmin;
+  display: flex;
+  text-align: center;
+}
+
+.skill {
+  display: inline;
+  flex-grow: 1;
+}
 
 /* For desktop */
 @media only screen and (min-width: 768px) {
@@ -78,26 +109,27 @@ img {
     background-position: center;
   }
 
-  #fb {
-    background-image: url("../images/facebookIcon.png");
-  }
-
   #fgl {
     border-right: none;
-  }
-
-  #linkedIn {
-    background-image: url("../images/linkedinIcon.png");
-  }
-
-  #github {
-    background-image: url("../images/githubIcon.png")
   }
 
   #home {
     border-left: none;
   }
 
+  #facts {
+    width: 20%;
+  }
+
+  .skillsList {
+    display: inline-block;
+    margin-left: 4vw;
+    text-align: left;
+  }
+
+  .skill {
+    display: block;
+  }
 
 
 
