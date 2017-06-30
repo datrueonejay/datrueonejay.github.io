@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  padding: 0 0;
+  margin: 0 0;
+  color: #FFF;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #24305E;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* For Mobile */
+
+.header {
+  padding: 0 1vmin;
+  background-color: #374785;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 15vh;
+}
+
+.headingSection {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+}
+
+.headingText {
+  text-align: center;
+  width: 100%;
+  font-size: 4vmin;
+}
+
+.picLink {
+  max-width: 100%;
+  max-height: 100%;
+  flex-grow: 1;
+}
+
+#fgl {
+  display: inline-flex;
+}
+
+
+/* For desktop */
+@media only screen and (min-width: 768px) {
+
+  .header {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+
+  .headingSection {
+    width: auto;
+    border-right: #24305E solid 0.5vmin;
+    border-left: #24305E solid 0.5vmin;
+    height: 100%;
+  }
+
+  .headingText {
+    text-align: left;
+  }
+
+  #contact {
+    padding-left: 1vmin;
+  }
+
+  .picLink {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #fb {
+    background-image: url("../images/facebookIcon.png");
+  }
+
+  #fgl {
+    border-right: none;
+  }
+
+  #linkedIn {
+    background-image: url("../images/linkedinIcon.png");
+  }
+
+  #github {
+    background-image: url("../images/githubIcon.png")
+  }
+
+  #home {
+    border-left: none;
+  }
+
+
+
+
+}
