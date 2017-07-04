@@ -8,6 +8,7 @@
 html {
   font-family: 'Poppins', sans-serif;
   background-color: #24305E;
+  word-wrap: break-word;
 }
 
 img {
@@ -17,14 +18,19 @@ img {
 
 /* For Mobile */
 
+body {
+  font-size: 50%;
+}
+
 .header {
   padding: 0 1vmin;
   background-color: #374785;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 15vh;
+  /*height: 25vh;*/
   justify-content: space-around;
+  margin-bottom: 1.5vmin;
 }
 
 .headingSection {
@@ -36,62 +42,82 @@ img {
 .headingText {
   text-align: center;
   width: 100%;
-  font-size: 4vmin;
+  font-size: 2.5em;
 }
 
 .picLink {
-  max-width: 100%;
-  max-height: 100%;
+  height: 100%;
   flex-grow: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #fb {
-  background-image: url("../images/facebookIcon.png");
+  /*background-image: url("../images/facebookIcon.png");*/
 }
 
 #linkedIn {
-  background-image: url("../images/linkedinIcon.png");
+  /*background-image: url("../images/linkedinIcon.png");*/
 }
 
 #github {
-  background-image: url("../images/githubIcon.png")
+  /*background-image: url("../images/githubIcon.png")*/
 }
 
 #facts {
-  margin-top: 1.5vh;
   width: 100%;
   background-color: #374785;
   padding: 1vmin;
-  font-size: 3vmin;
 }
 
 #factsTitle {
   text-align: center;
+  font-size: 2.5em;
+}
+
+.skillsTitle {
+  font-size: 1.5em;
 }
 
 .skillsList {
-  font-size: 2.5vmin;
+  font-size: 1em;
   display: flex;
-  text-align: center;
 }
 
 .skill {
   display: inline;
-  flex-grow: 1;
+  width: 33%;
+  margin: 0 0.1em;
+}
+
+#introContainer {
+  background-color: #374785;
+  padding: 1vmin;
+}
+
+#descriptionMe {
+  text-align: center;
 }
 
 /* For desktop */
 @media only screen and (min-width: 768px) {
 
+  body {
+    font-size: 100%;
+  }
+
   .header {
     display: inline-flex;
     flex-wrap: nowrap;
+    /*height: 15vh;*/
+    font-size: 1em;
   }
 
   .headingSection {
     width: auto;
-    border-right: #24305E solid 0.5vmin;
-    border-left: #24305E solid 0.5vmin;
+    /*border-right: #24305E solid 0.5vmin;
+    border-left: #24305E solid 0.5vmin;*/
     height: 100%;
   }
 
@@ -103,22 +129,31 @@ img {
     padding-left: 1vmin;
   }
 
-  .picLink {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   #fgl {
     border-right: none;
+    max-width: 25%;
   }
 
   #home {
     border-left: none;
   }
 
+  #bodyContainer {
+    display: flex;
+    align-content: flex-start;
+  }
+
   #facts {
     width: 20%;
+    /*height: 83.5vh;*/
+    display: inline-block;
+  }
+
+  #factsTitle {
+    font-size: 2em;
+  }
+
+  .skillsTitle {
   }
 
   .skillsList {
@@ -129,8 +164,13 @@ img {
 
   .skill {
     display: block;
+    width: auto;
   }
 
-
+  #introContainer {
+    width: 79.3%;
+    height: 83.5vh;
+    float: right;
+  }
 
 }
