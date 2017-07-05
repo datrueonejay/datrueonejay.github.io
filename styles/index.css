@@ -4,6 +4,7 @@
   margin: 0 0;
   color: #FFF;
   font-family: 'Poppins', sans-serif;
+  word-wrap: break-word;
 }
 
 html {
@@ -15,161 +16,57 @@ img {
   max-height: 100%;
 }
 
-/* For Mobile */
-
 body {
-  font-size: 50%;
+  font-size: 12px;
+  width: 100%;
+}
+
+.row {
+  height: 100%;
 }
 
 .header {
-  padding: 0 1vmin;
+  margin-right: 0;
   background-color: #374785;
+  padding: 0vmin 1vmin;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  /*height: 25vh;*/
-  justify-content: space-around;
   margin-bottom: 1.5vmin;
 }
 
-.headingSection {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-}
-
-.headingText {
-  text-align: center;
-  width: 100%;
+#name {
   font-size: 2.5em;
+  margin-top: auto;
 }
 
 .picLink {
-  height: 100%;
-  flex-grow: 1;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-#fb {
-  /*background-image: url("../images/facebookIcon.png");*/
-}
-
-#linkedIn {
-  /*background-image: url("../images/linkedinIcon.png");*/
-}
-
-#github {
-  /*background-image: url("../images/githubIcon.png")*/
-}
-
-#facts {
-  width: 100%;
-  background-color: #374785;
-  padding: 1vmin;
-}
-
-#factsTitle {
-  text-align: center;
-  font-size: 2.5em;
-}
-
-.skillsTitle {
-  font-size: 1.5em;
-}
-
-.skillsList {
-  font-size: 1em;
-  display: flex;
-}
-
-.skill {
-  display: inline;
-  width: 33%;
-  margin: 0 0.1em;
-}
-
-#introContainer {
-  background-color: #374785;
-  padding: 1vmin;
-}
-
-#descriptionMe {
-  text-align: center;
-}
-
-/* For desktop */
+/* s size*/
 @media only screen and (min-width: 768px) {
-
   body {
-    font-size: 100%;
-  }
-
-  .header {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    /*height: 15vh;*/
-    font-size: 1em;
+    font-size: 14px;
   }
 
   .headingSection {
-    width: auto;
-    /*border-right: #24305E solid 0.5vmin;
-    border-left: #24305E solid 0.5vmin;*/
-    height: 100%;
-  }
-
-  .headingText {
-    text-align: left;
-  }
-
-  #contact {
-    padding-left: 1vmin;
+   border-right: #24305E solid 0.75vmin;
+   border-left: #24305E solid 0.75vmin;
   }
 
   #fgl {
-    border-right: none;
-    max-width: 25%;
+    border-right: 0;
   }
+}
 
-  #home {
-    border-left: none;
+/* m size*/
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 16px;
   }
+}
 
-  #bodyContainer {
-    display: flex;
-    align-content: flex-start;
+/* lg size*/
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
   }
-
-  #facts {
-    width: 20%;
-    /*height: 83.5vh;*/
-    display: inline-block;
-  }
-
-  #factsTitle {
-    font-size: 2em;
-  }
-
-  .skillsTitle {
-  }
-
-  .skillsList {
-    display: inline-block;
-    margin-left: 4vw;
-    text-align: left;
-  }
-
-  .skill {
-    display: block;
-    width: auto;
-  }
-
-  #introContainer {
-    width: 79.3%;
-    height: 83.5vh;
-    float: right;
-  }
-
 }

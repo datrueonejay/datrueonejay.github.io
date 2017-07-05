@@ -10,26 +10,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/scripts.js" type="text/javascript"></script>
+    <script src="scripts/jquery.matchHeight.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Poppins" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet" type="text/css">
 
   </head>
 
+  <body>
   <div class="header">
-    <span class="headingSection" id="home"><p class="headingText">Jayden Arquelada</p></span>
-    <span class="headingSection" id="contactInfo">Tel: (647) 268-0248<br>
-      E-Mail: jayden.arquelada@mail.utoronto.ca
-    </span>
-    <span class="headingSection" id="fgl">
-      <a class="picLink" id="fb" href="https://www.facebook.com/JaydenArquelada"
-        target="_blank"><img src="images/facebookIcon.png"></a>
-      <a class="picLink" id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
-        target="blank"><img src="images/linkedinIcon.png"></a>
-      <a class="picLink" id="github" href="https://github.com/datrueonejay"
-        target="blank"><img src="images/githubIcon.png"></a>
-    </span>
+    <div class="row">
+      <div class="col-sm-5 headingSection mh-100" id="name"><div>Jayden Arquelada</div></div>
+      <div class="col-sm-4 headingSection mh-100" id="contactInfo"><div>Contact me at <br>(647) 268-0248<br>
+        jayden.arquelada@mail.utoronto.ca</div>
+      </div>
+      <div class="col-sm-3 headingSection mh-100" id="fgl">
+        <a id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
+          target="blank"><img class="col-xs-4 picLink" src="images/linkedinIcon.png"></a>
+        <a id="github" href="https://github.com/datrueonejay"
+          target="blank"><img class="col-xs-4 picLink" src="images/githubIcon.png"></a>
+        <a id="fb" href="https://www.facebook.com/JaydenArquelada"
+          target="blank"><img class="col-xs-4 img-responsive picLink" src="images/facebookIcon.png"></a>
+      </div>
+    </div>
   </div>
-
+<!--
   <div id="facts">
     <div id="factsTitle">Qualifications</div>
     <div class="skillsTitle">Technical</div>
@@ -60,8 +65,8 @@
       reading, app loving, puzzle solving, one of a kind. But you can just call
       me, Jayden.
     </div>
-  </div>
-
+  </div> -->
+</body>
 
 
 </html>
