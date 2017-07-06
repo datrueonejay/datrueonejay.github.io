@@ -1,10 +1,10 @@
 * {
-  box-sizing: border-box;
   padding: 0 0;
   margin: 0 0;
   color: #FFF;
   font-family: 'Poppins', sans-serif;
   word-wrap: break-word;
+
 }
 
 
@@ -17,24 +17,38 @@ img {
 }
 
 body {
-  font-size: 12px;
-  background-color: #24305E;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  background-color: #374785;
+
 }
 
+.filler {
+  position: relative;
+  width: 100%;
+}
+
+#headerFiller {
+}
+
+
 .row {
-  height: 100%;
 }
 
 .header {
-  margin-right: 0;
   background-color: #374785;
-  margin-bottom: 1.5vmin;
-
+  margin-right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+  border-bottom: #24305E solid 1.5vmin;
 }
 
 #name {
   font-size: 2.5em;
-  margin-top: auto;
 }
 
 #contactInfo, #name {
@@ -42,9 +56,14 @@ body {
 }
 
 #bodyContainer {
-  width: 100%;
+  align-items: stretch;
+  display: flex;
   background-color: #374785;
-  margin-bottom: 1.5vmin;
+  overflow-y: visible;
+}
+
+#qualifications, #aboutMe {
+
 }
 
 .skillsTitle {
@@ -63,7 +82,6 @@ body {
 }
 
 .carouselImage {
-  margin: 0 auto;
   width: 100%;
 }
 
@@ -74,12 +92,38 @@ body {
 #footer {
   background-color: #374785;
   margin-right: 0;
-  
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 15;
+  border-top: #24305E solid 1.5vmin;
+  padding: 1vmin 0;
+}
+
+#footerFiller {
+}
+
+#footerRow {
+  height: 100%;
+}
+
+.picLinkContainer {
+  text-align: center;
+  height: 100%;
+}
+
+.picLinkAnchor {
 }
 
 .picLink {
-  max-width: 50px;
+  display: inline-block;
 }
+
+.test {
+  background-color: yellow;
+
+}
+
 
 /* s size*/
 @media only screen and (min-width: 768px) {
@@ -87,9 +131,12 @@ body {
     font-size: 14px;
   }
 
-  .headingSection {
+  #name {
    border-right: #24305E solid 0.75vmin;
-   border-left: #24305E solid 0.75vmin;
+  }
+
+  #contactInfo {
+    border-left: #24305E solid 0.75vmin;
   }
 
   #contactInfo, #name {
@@ -100,8 +147,18 @@ body {
     border-right: 0;
   }
 
-  #name {
-    border-left: 0;
+  #leftDivideContainer {
+    top:0;
+    border-right: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  #leftDivide {
+    border-right: 0;
+    height: 100%;
+    border-left: #24305E solid 1.5vmin;
   }
 
   .skillsTitle {
@@ -115,20 +172,19 @@ body {
   }
 
   #aboutMe {
-    border-left: #24305E solid 1.5vmin;
   }
 }
 
 /* m size*/
 @media only screen and (min-width: 992px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
 /* lg size*/
 @media only screen and (min-width: 1200px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
