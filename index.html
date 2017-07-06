@@ -75,12 +75,38 @@
       </div>
 
       <div class="col-sm-9" id="aboutMe">
-        <div>A second year student at the University of Toronto Scarborough Campus. </div>
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div class=" navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li data-target="#myCarousel" data-slide-to="0"><a href="#" >Page 1</a></li>
+                <li data-target="#myCarousel" data-slide-to="1"><a href="#">Page 2</a></li>
+                <li data-target="#myCarousel" data-slide-to="2"><a href="#">Page 3</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- <div>A second year student at the University of Toronto Scarborough Campus. </div>
         <div>A young passionate, music loving developer.</div>
         <div>A manga reading, app loving, puzzle solving, one of a kind. </div>
-        <div>But you can just callme, Jayden.</div>
+        <div>But you can just callme, Jayden.</div> -->
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -136,6 +162,8 @@
           target="blank"><img class="picLink img-responsive" src="images/githubIcon2.png"></a>
         <a class="picLinkAnchor" id="fb" href="https://www.facebook.com/JaydenArquelada"
           target="blank"><img class="picLink img-responsive" src="images/facebookIcon2.png"></a>
+        <a class="picLinkAnchor" id="playStore" href="https://play.google.com/store/search?q=datrueonejay&hl=en"
+          target="blank"><img class="picLink img-responsive" src="images/playStoreLogo.png"></a>
       </div>
     </div>
   </div>
