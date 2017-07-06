@@ -19,10 +19,21 @@
 
   <body>
 
-  <div class="header container-fluid">
+    <div class="filler" id="headerFiller">
+      hello
+    </div>
+
+    <div  class="container-fluid" style="width:100%">
+      <div class="row" id="leftDivideContainer">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-9" id="leftDivide"></div>
+      </div>
+    </div>
+
+  <div class="header container-fluid" id="header">
     <div class="row">
       <div class="col-sm-8 headingSection" id="name"><div>Jayden Arquelada</div></div>
-      <div class="col-sm-4 headingSection" id="contactInfo"><div>Contact me at <br>(647) 268-0248<br>
+      <div class="col-sm-4 headingSection" id="contactInfo"><div>(647) 268-0248<br>
         jayden.arquelada@mail.utoronto.ca</div>
       </div>
       <!-- <div class="col-sm-3 headingSection" id="fgl">
@@ -36,11 +47,14 @@
     </div>
   </div>
 
+
+
   <div class="container-fluid" id="bodyContainer">
     <div class="row">
 
       <div class="col-sm-3" id="qualifications">
-        <div class="skillsTitle">Technical</div>
+        <div class="skillsTitle">Technical
+        </div>
         <ul class="skillsList">
           <li class="skill col-xs-6 col-sm-12">• Java</li>
           <li class="skill col-xs-6 col-sm-12">• Python</li>
@@ -50,7 +64,8 @@
           <li class="skill col-xs-6 col-sm-12">• JavaScript</li>
         </ul>
 
-        <div class="skillsTitle">Interpersonal</div>
+        <div class="skillsTitle">Interpersonal
+        </div>
         <ul class="skillsList">
           <li class="skill col-xs-6 col-sm-12">• Effective communication skills</li>
           <li class="skill col-xs-6 col-sm-12">• Excellent collaboration ability</li>
@@ -60,11 +75,10 @@
       </div>
 
       <div class="col-sm-9" id="aboutMe">
-        <div>A second year student at the University of Toronto
-        Scarborough Campus. A young passionate, music loving developer. A manga
-        reading, app loving, puzzle solving, one of a kind. But you can just call
-        me, Jayden.
-        </div>
+        <div>A second year student at the University of Toronto Scarborough Campus. </div>
+        <div>A young passionate, music loving developer.</div>
+        <div>A manga reading, app loving, puzzle solving, one of a kind. </div>
+        <div>But you can just callme, Jayden.</div>
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -110,18 +124,19 @@
     </div>
   </div>
 
+  <div class="filler" id="footerFiller">
+  </div>
+
   <div class="container-fluid"  id="footer">
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <a id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
-          target="blank"><img class="col-xs-4 picLink center-block" src="images/linkedinIcon.png"></a>
-        <a id="github" href="https://github.com/datrueonejay"
-          target="blank"><img class="col-xs-4 picLink center-block" src="images/githubIcon.png"></a>
-        <a id="fb" href="https://www.facebook.com/JaydenArquelada"
-          target="blank"><img class="col-xs-4 picLink center-block" src="images/facebookIcon.png"></a>
+    <div class="row" id="footerRow">
+      <div class=" picLinkContainer">
+        <a class="picLinkAnchor" id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
+          target="blank"><img class="picLink img-responsive" src="images/linkedinIcon2.png"></a>
+        <a class="picLinkAnchor" id="github" href="https://github.com/datrueonejay"
+          target="blank"><img class="picLink img-responsive" src="images/githubIcon2.png"></a>
+        <a class="picLinkAnchor" id="fb" href="https://www.facebook.com/JaydenArquelada"
+          target="blank"><img class="picLink img-responsive" src="images/facebookIcon2.png"></a>
       </div>
-      <div class="col-sm-4">Credits to Ashton Arquelada for the domain name.</div>
     </div>
   </div>
 
