@@ -7,8 +7,8 @@
   word-wrap: break-word;
 }
 
+
 html {
-  background-color: #24305E;
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 
 body {
   font-size: 12px;
-  width: 100%;
+  background-color: #24305E;
 }
 
 .row {
@@ -28,9 +28,8 @@ body {
 .header {
   margin-right: 0;
   background-color: #374785;
-  padding: 0vmin 1vmin;
-  width: 100%;
   margin-bottom: 1.5vmin;
+
 }
 
 #name {
@@ -38,7 +37,48 @@ body {
   margin-top: auto;
 }
 
+#contactInfo, #name {
+  text-align: center;
+}
+
+#bodyContainer {
+  width: 100%;
+  background-color: #374785;
+  margin-bottom: 1.5vmin;
+}
+
+.skillsTitle {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.skillsList {
+  text-align: center;
+}
+
+.skill {
+  font-size: 1em;
+  display: inline;
+  text-align: center;
+}
+
+.carouselImage {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carouselCaption {
+  background-color: black;
+}
+
+#footer {
+  background-color: #374785;
+  margin-right: 0;
+  
+}
+
 .picLink {
+  max-width: 50px;
 }
 
 /* s size*/
@@ -52,8 +92,30 @@ body {
    border-left: #24305E solid 0.75vmin;
   }
 
-  #fgl {
+  #contactInfo, #name {
+    text-align: left;
+  }
+
+  #contactInfo {
     border-right: 0;
+  }
+
+  #name {
+    border-left: 0;
+  }
+
+  .skillsTitle {
+    text-align: left;
+  }
+
+  .skill {
+    text-align: left;
+    font-size: 1em;
+    display: block;
+  }
+
+  #aboutMe {
+    border-left: #24305E solid 1.5vmin;
   }
 }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J. Arquelada</title>
+    <title>Jayden Arquelada</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -18,55 +18,145 @@
   </head>
 
   <body>
-  <div class="header">
+
+  <div class="header container-fluid">
     <div class="row">
-      <div class="col-sm-5 headingSection mh-100" id="name"><div>Jayden Arquelada</div></div>
-      <div class="col-sm-4 headingSection mh-100" id="contactInfo"><div>Contact me at <br>(647) 268-0248<br>
+      <div class="col-sm-8 headingSection" id="name"><div>Jayden Arquelada</div></div>
+      <div class="col-sm-4 headingSection" id="contactInfo"><div>Contact me at <br>(647) 268-0248<br>
         jayden.arquelada@mail.utoronto.ca</div>
       </div>
-      <div class="col-sm-3 headingSection mh-100" id="fgl">
+      <!-- <div class="col-sm-3 headingSection" id="fgl">
         <a id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
           target="blank"><img class="col-xs-4 picLink" src="images/linkedinIcon.png"></a>
         <a id="github" href="https://github.com/datrueonejay"
           target="blank"><img class="col-xs-4 picLink" src="images/githubIcon.png"></a>
         <a id="fb" href="https://www.facebook.com/JaydenArquelada"
-          target="blank"><img class="col-xs-4 img-responsive picLink" src="images/facebookIcon.png"></a>
+          target="blank"><img class="col-xs-4 picLink" src="images/facebookIcon.png"></a>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container-fluid" id="bodyContainer">
+    <div class="row">
+
+      <div class="col-sm-3" id="qualifications">
+        <div class="skillsTitle">Technical</div>
+        <ul class="skillsList">
+          <li class="skill col-xs-6 col-sm-12">• Java</li>
+          <li class="skill col-xs-6 col-sm-12">• Python</li>
+          <li class="skill col-xs-6 col-sm-12">• XML (Android based)</li>
+          <li class="skill col-xs-6 col-sm-12">• HTML</li>
+          <li class="skill col-xs-6 col-sm-12">• CSS</li>
+          <li class="skill col-xs-6 col-sm-12">• JavaScript</li>
+        </ul>
+
+        <div class="skillsTitle">Interpersonal</div>
+        <ul class="skillsList">
+          <li class="skill col-xs-6 col-sm-12">• Effective communication skills</li>
+          <li class="skill col-xs-6 col-sm-12">• Excellent collaboration ability</li>
+          <li class="skill col-xs-6 col-sm-12">• Strong time management </li>
+          <li class="skill col-xs-6 col-sm-12">• Demonstrated desire to learn</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-9" id="aboutMe">
+        <div>A second year student at the University of Toronto
+        Scarborough Campus. A young passionate, music loving developer. A manga
+        reading, app loving, puzzle solving, one of a kind. But you can just call
+        me, Jayden.
+        </div>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item active">
+              <img class="carouselImage" src="images/utscLogo.png">
+              <div class="carousel-caption">
+                <!-- <h3 class="carouselCaption">Education</h3>
+                <p class="carouselCaption"></p> -->
+              </div>
+            </div>
+
+            <div class="item">
+              <img class="carouselImage" src="images/projects.png">
+            </div>
+
+            <div class="item">
+              <img class="carouselImage" src="images/skills2.png">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+        </div>
+
       </div>
     </div>
   </div>
-<!--
-  <div id="facts">
-    <div id="factsTitle">Qualifications</div>
-    <div class="skillsTitle">Technical</div>
-    <ul class="skillsList">
-      <li class="skill">• Java</li>
-      <li class="skill">• Python</li>
-      <li class="skill">• XML (Android based)</li>
-    </ul>
-    <ul class="skillsList">
-      <li class="skill">• HTML</li>
-      <li class="skill">• CSS</li>
-      <li class="skill">• JavaScript</li>
-    </ul>
 
-    <div class="skillsTitle">Interpersonal</div>
-    <ul class="skillsList">
-      <li class="skill">• Effective communication skills</li>
-      <li class="skill">• Excellent collaboration ability</li>
-      <li class="skill">• Strong time management </li>
-      <li class="skill">• Demonstrated desire to learn</li>
-    </ul>
+  <div class="container-fluid"  id="footer">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <a id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
+          target="blank"><img class="col-xs-4 picLink center-block" src="images/linkedinIcon.png"></a>
+        <a id="github" href="https://github.com/datrueonejay"
+          target="blank"><img class="col-xs-4 picLink center-block" src="images/githubIcon.png"></a>
+        <a id="fb" href="https://www.facebook.com/JaydenArquelada"
+          target="blank"><img class="col-xs-4 picLink center-block" src="images/facebookIcon.png"></a>
+      </div>
+      <div class="col-sm-4">Credits to Ashton Arquelada for the domain name.</div>
+    </div>
   </div>
 
-
-  <div id="introContainer">
-    <div id="descriptionMe">A second year student at the University of Toronto
-      Scarborough Campus. A young passionate, music loving developer. A manga
-      reading, app loving, puzzle solving, one of a kind. But you can just call
-      me, Jayden.
-    </div>
-  </div> -->
 </body>
+<!--
+<div id="facts">
+  <div id="factsTitle">Qualifications</div>
+  <div class="skillsTitle">Technical</div>
+  <ul class="skillsList">
+    <li class="skill">• Java</li>
+    <li class="skill">• Python</li>
+    <li class="skill">• XML (Android based)</li>
+  </ul>
+  <ul class="skillsList">
+    <li class="skill">• HTML</li>
+    <li class="skill">• CSS</li>
+    <li class="skill">• JavaScript</li>
+  </ul>
 
+  <div class="skillsTitle">Interpersonal</div>
+  <ul class="skillsList">
+    <li class="skill">• Effective communication skills</li>
+    <li class="skill">• Excellent collaboration ability</li>
+    <li class="skill">• Strong time management </li>
+    <li class="skill">• Demonstrated desire to learn</li>
+  </ul>
+</div>
+
+
+<div id="introContainer">
+  <div id="descriptionMe">A second year student at the University of Toronto
+    Scarborough Campus. A young passionate, music loving developer. A manga
+    reading, app loving, puzzle solving, one of a kind. But you can just call
+    me, Jayden.
+  </div>
+</div> -->
 
 </html>
