@@ -76,26 +76,28 @@
 
       <div class="col-sm-9" id="aboutMe">
 
+        <!-- <div class="pagesBar row">
+          <li class="active"><a href="#">Home</a></li>
+          <div class="navPage col-sm-4" id="nav0" data-target="#myCarousel" data-slide-to="0"><a href="#" >Educations</a></div>
+          <div class="navPage col-sm-4" id="nav1" data-target="#myCarousel" data-slide-to="1"><a href="#">Projects</a></div>
+          <div class="navPage col-sm-4" id="nav2" data-target="#myCarousel" data-slide-to="2"><a href="#">Experiences</a></div>
+        </div> -->
+
+
         <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
+          <div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">WebSiteName</a>
             </div>
             <div class=" navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li data-target="#myCarousel" data-slide-to="0"><a href="#" >Page 1</a></li>
-                <li data-target="#myCarousel" data-slide-to="1"><a href="#">Page 2</a></li>
-                <li data-target="#myCarousel" data-slide-to="2"><a href="#">Page 3</a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li class="navPage" id="nav0" data-target="#myCarousel" data-slide-to="0"><a href="#">Education</a></li>
+                <li class="navPage" id="nav1" data-target="#myCarousel" data-slide-to="1"><a href="#">Projects</a></li>
+                <li class="navPage" id="nav2" data-target="#myCarousel" data-slide-to="2"><a href="#">Experience</a></li>
               </ul>
             </div>
           </div>
@@ -108,16 +110,16 @@
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
           <!-- Indicators -->
-          <ol class="carousel-indicators">
+          <!-- <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+          </ol> -->
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
 
-            <div class="item active">
+            <div class="item">
               <img class="carouselImage" src="images/utscLogo.png">
               <div class="carousel-caption">
                 <!-- <h3 class="carouselCaption">Education</h3>
@@ -132,17 +134,21 @@
             <div class="item">
               <img class="carouselImage" src="images/skills2.png">
             </div>
+
+            <div class="item active">
+              ABOUT ME!
+            </div>
           </div>
 
           <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> -->
 
         </div>
 
@@ -155,7 +161,7 @@
 
   <div class="container-fluid"  id="footer">
     <div class="row" id="footerRow">
-      <div class=" picLinkContainer">
+      <div class="picLinkContainer">
         <a class="picLinkAnchor" id="linkedIn" href="https://www.linkedin.com/in/jayden-arquelada-b70186111/"
           target="blank"><img class="picLink img-responsive" src="images/linkedinIcon2.png"></a>
         <a class="picLinkAnchor" id="github" href="https://github.com/datrueonejay"
@@ -167,6 +173,11 @@
       </div>
     </div>
   </div>
+<!--
+  <div  class="container-fluid" id="footerDivideContainer">
+      <div class="col-xs-9"></div>
+      <div class="col-xs-3" id="rightDivide"></div>
+  </div> -->
 
 </body>
 <!--

@@ -57,6 +57,8 @@ body {
 }
 
 #bodyContainer {
+  padding-top: 0;
+  position: static;
   align-items: stretch;
   display: flex;
   background-color: #374785;
@@ -64,7 +66,15 @@ body {
 }
 
 #aboutMe {
-  padding: 1.5vmin 1.5vmin 0px 3vmin;
+  padding: 0 1.5vmin 0px 4.5vmin;
+}
+
+.pagesBar {
+  margin-top: 0;
+}
+
+#nav0:hover {
+  background-color: #FF9A45;
 }
 
 .skillsTitle {
@@ -82,12 +92,13 @@ body {
   text-align: center;
 }
 
-.carouselImage {
-  width: 100%;
+.navbar {
+  opacity: 1;
+  background-color: none;
 }
 
-.carouselCaption {
-  background-color: black;
+.carouselImage {
+  width: 100%;
 }
 
 #footer {
@@ -95,8 +106,8 @@ body {
   margin-right: 0;
   width: 100%;
   position: fixed;
-  bottom: 0px;
-  z-index: 15;
+  bottom: 0;
+  z-index: 10;
   border-top: #24305E solid 1.5vmin;
   padding: 1vmin 0;
 }
@@ -104,7 +115,8 @@ body {
 #footerFiller {
 }
 
-#footerRow {
+
+#footerRow, #footerDivideRow {
   height: 100%;
 }
 
@@ -133,11 +145,10 @@ body {
   }
 
   #name {
-   border-right: #24305E solid 0.75vmin;
   }
 
   #contactInfo {
-    border-left: #24305E solid 0.75vmin;
+    border-left: #24305E solid 1.5vmin;
   }
 
   #contactInfo, #name {
@@ -161,6 +172,7 @@ body {
     height: 100%;
     border-left: #24305E solid 1.5vmin;
   }
+
 
   .skillsTitle {
     text-align: left;
