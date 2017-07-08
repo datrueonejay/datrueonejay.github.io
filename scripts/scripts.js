@@ -7,46 +7,44 @@ $(document).ready(function() {
   $("#footer").height((tallness/3));
   $("#footerDivideContainer").height((tallness/3));
 
-  $("#nav0").click(function(){
-    $("#myCarousel").carousel(0);
-    $(".navPage").removeClass("active");
-    $(this).addClass("active");
-    $("#bodyContainer").css({
+  // variable to hold the cur nav page
+  var currNavPage = "home";
+
+  $("#navEdu").click(function(){
+    $("#proj, #exp").fadeOut();
+    if (currNavPage != "edu") {
+      $("#edu").slideDown();
+    }
+    $("#bodyContainer, html, body").animate({
       "background-color": "#FF9A45"
     });
-    $("body").css({
-      "background-color": "#FF9A45"
-    });
-    $(this).css({
-      "background-color": "#FF9A45"
-    });
-    // $("#bodyContainer").animate({backgroundColor: "red"});
+    currNavPage = "edu";
   });
 
-
-
-  $("#nav1").click(function(){
-    $("#myCarousel").carousel(1);
-    $(".navPage").removeClass("active");
-    $(this).addClass("active");
-    $("#bodyContainer").css({
+  $("#navProj").click(function(){
+    $("#edu, #exp").fadeOut();
+    if (currNavPage != "proj") {
+      $("#proj").slideDown();
+    }
+    $("#bodyContainer, html, body").animate({
       "background-color": "#F76C6C"
     });
-    $("body").css({
-      "background-color": "#F76C6C"
-    });
+    currNavPage = "proj";
   });
-  $("#nav2").click(function(){
-    $("#myCarousel").carousel(2);
-    $(".navPage").removeClass("active");
-    $(this).addClass("active");
-    $("#bodyContainer").css({
+
+  $("#navExp").click(function(){
+    $("#edu, #proj").fadeOut();
+    if (currNavPage != "exp") {
+      $("#exp").slideDown();
+    }
+    $("#bodyContainer, body, html").animate({
       "background-color": "#FDFF77"
     });
-    $("body").css({
-      "background-color": "#FDFF77"
-    });
+    currNavPage = "exp";
+
   });
+
+
   // $(window).resize(function(){
   //   var tallness = $("#header").outerHeight(true);
   //   $(".filler").css({

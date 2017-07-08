@@ -9,6 +9,8 @@
 
 
 html {
+  height: 100%;
+  background-color: #374785;
 }
 
 img {
@@ -17,12 +19,13 @@ img {
 }
 
 body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
   font-size: 11px;
   background-color: #374785;
+}
 
+.fillHeight {
+  height: 100%;
 }
 
 .filler {
@@ -58,12 +61,12 @@ body {
 
 #bodyContainer {
   padding-top: 0;
-  position: static;
-  align-items: stretch;
   display: flex;
-  background-color: #374785;
   overflow-y: visible;
+  height: 100%;
 }
+
+
 
 #aboutMe {
   padding: 0 1.5vmin 0px 4.5vmin;
@@ -71,10 +74,27 @@ body {
 
 .pagesBar {
   margin-top: 0;
+  margin-right: 0;
 }
 
-#nav0:hover {
+.navPage {
+  cursor: pointer;
+}
+
+#navEdu {
   background-color: #FF9A45;
+}
+
+#navProj {
+  background-color: #F76C6C;
+}
+
+#navExp {
+
+}
+
+.navPic {
+  display: none;
 }
 
 .skillsTitle {
@@ -116,13 +136,11 @@ body {
 }
 
 
-#footerRow, #footerDivideRow {
-  height: 100%;
+#footerRow {
 }
 
 .picLinkContainer {
   text-align: center;
-  height: 100%;
 }
 
 .picLinkAnchor {
@@ -163,13 +181,11 @@ body {
     top:0;
     border-right: 0;
     position: fixed;
-    height: 100%;
     width: 100%;
   }
 
   #leftDivide {
     border-right: 0;
-    height: 100%;
     border-left: #24305E solid 1.5vmin;
   }
 
