@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $(".headingSection").matchHeight();
   var tallness = $("#header").outerHeight(true);
-  $(".filler").css({
-    "height": tallness
+  $("body").css({
+    "padding-top": tallness
   });
   $("#footer").height((tallness/3));
   $("#footerDivideContainer").height((tallness/3));
@@ -10,10 +10,25 @@ $(document).ready(function() {
   // variable to hold the cur nav page
   var currNavPage = "home";
 
+  $("#navHome").click(function() {
+    $("#edu, #proj, #exp").slideUp();
+    if (currNavPage != "home") {
+      setTimeout(function() {
+        $("#home").slideDown();
+      }, 400);
+    }
+    $("#bodyContainer, html, body").animate({
+      "background-color": "#374785"
+    });
+    currNavPage = "home";
+  });
+
   $("#navEdu").click(function(){
-    $("#proj, #exp").fadeOut();
+    $("#home, #proj, #exp").slideUp();
     if (currNavPage != "edu") {
-      $("#edu").slideDown();
+      setTimeout(function() {
+        $("#edu").slideDown();
+      }, 400);
     }
     $("#bodyContainer, html, body").animate({
       "background-color": "#FF9A45"
@@ -22,9 +37,11 @@ $(document).ready(function() {
   });
 
   $("#navProj").click(function(){
-    $("#edu, #exp").fadeOut();
+    $("#home, #edu, #exp").slideUp();
     if (currNavPage != "proj") {
-      $("#proj").slideDown();
+      setTimeout(function() {
+        $("#proj").slideDown();
+      }, 400);
     }
     $("#bodyContainer, html, body").animate({
       "background-color": "#F76C6C"
@@ -33,23 +50,26 @@ $(document).ready(function() {
   });
 
   $("#navExp").click(function(){
-    $("#edu, #proj").fadeOut();
+    $("#home, #edu, #proj").slideUp();
     if (currNavPage != "exp") {
-      $("#exp").slideDown();
+      setTimeout(function() {
+        $("#exp").slideDown();
+      }, 400);
     }
     $("#bodyContainer, body, html").animate({
-      "background-color": "#FDFF77"
+      "background-color": "#FEE64C"
     });
     currNavPage = "exp";
 
   });
 
 
-  // $(window).resize(function(){
-  //   var tallness = $("#header").outerHeight(true);
-  //   $(".filler").css({
-  //     "height": tallness
-  //   });
-  //   console.log(tallness);
-  // });
+  $(window).resize(function(){
+    var tallness = $("#header").outerHeight(true);
+    $("body").css({
+      "padding-top": tallness
+    });
+    console.log(tallness);
+    console.log($("#headerFiller").height());
+  });
 });

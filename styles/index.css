@@ -66,10 +66,9 @@ body {
   height: 100%;
 }
 
-
-
 #aboutMe {
-  padding: 0 1.5vmin 0px 4.5vmin;
+  padding: 0 0 0 1.5vmin;
+  margin: 0;
 }
 
 .pagesBar {
@@ -81,6 +80,10 @@ body {
   cursor: pointer;
 }
 
+#navHome {
+  background-color: #374785;
+}
+
 #navEdu {
   background-color: #FF9A45;
 }
@@ -90,11 +93,15 @@ body {
 }
 
 #navExp {
-
+  background-color: #FEE64C;
 }
 
 .navPic {
   display: none;
+}
+
+#home {
+  display: block;
 }
 
 .skillsTitle {
@@ -152,7 +159,6 @@ body {
 
 .test {
   background-color: yellow;
-
 }
 
 
@@ -178,7 +184,7 @@ body {
   }
 
   #leftDivideContainer {
-    top:0;
+    top: 0;
     border-right: 0;
     position: fixed;
     width: 100%;
