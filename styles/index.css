@@ -9,6 +9,8 @@
 
 
 html {
+  height: 100%;
+  background-color: #374785;
 }
 
 img {
@@ -17,12 +19,17 @@ img {
 }
 
 body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
   font-size: 11px;
   background-color: #374785;
+}
 
+a:hover {
+  text-decoration: none;
+}
+
+.fillHeight {
+  height: 100%;
 }
 
 .filler {
@@ -35,6 +42,7 @@ body {
 
 
 .row {
+
 }
 
 .header {
@@ -56,14 +64,48 @@ body {
 }
 
 #bodyContainer {
-  align-items: stretch;
+  padding-top: 0;
   display: flex;
-  background-color: #374785;
   overflow-y: visible;
+  height: 100%;
 }
 
-#qualifications, #aboutMe {
+#aboutMe {
+  padding: 0 0 0 0;
+  margin: 0;
+}
 
+.pagesBar {
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.navPage {
+  cursor: pointer;
+}
+
+#navHome {
+  background-color: #374785;
+}
+
+#navEdu {
+  background-color: #FF9A45;
+}
+
+#navProj {
+  background-color: #F76C6C;
+}
+
+#navExp {
+  background-color: #FEE64C;
+}
+
+.navPic {
+  display: none;
+}
+
+#home {
+  display: block;
 }
 
 .skillsTitle {
@@ -81,12 +123,13 @@ body {
   text-align: center;
 }
 
-.carouselImage {
-  width: 100%;
+.navbar {
+  opacity: 1;
+  background-color: none;
 }
 
-.carouselCaption {
-  background-color: black;
+.carouselImage {
+  width: 100%;
 }
 
 #footer {
@@ -94,8 +137,8 @@ body {
   margin-right: 0;
   width: 100%;
   position: fixed;
-  bottom: 0px;
-  z-index: 15;
+  bottom: 0;
+  z-index: 10;
   border-top: #24305E solid 1.5vmin;
   padding: 1vmin 0;
 }
@@ -103,13 +146,12 @@ body {
 #footerFiller {
 }
 
+
 #footerRow {
-  height: 100%;
 }
 
 .picLinkContainer {
   text-align: center;
-  height: 100%;
 }
 
 .picLinkAnchor {
@@ -121,7 +163,6 @@ body {
 
 .test {
   background-color: yellow;
-
 }
 
 
@@ -132,11 +173,10 @@ body {
   }
 
   #name {
-   border-right: #24305E solid 0.75vmin;
   }
 
   #contactInfo {
-    border-left: #24305E solid 0.75vmin;
+    border-left: #24305E solid 1.5vmin;
   }
 
   #contactInfo, #name {
@@ -148,18 +188,17 @@ body {
   }
 
   #leftDivideContainer {
-    top:0;
+    top: 0;
     border-right: 0;
     position: fixed;
-    height: 100%;
     width: 100%;
   }
 
   #leftDivide {
     border-right: 0;
-    height: 100%;
     border-left: #24305E solid 1.5vmin;
   }
+
 
   .skillsTitle {
     text-align: left;
@@ -172,7 +211,10 @@ body {
   }
 
   #aboutMe {
+    padding: 0 0 0 1.5vmin;
   }
+
+
 }
 
 /* m size*/
