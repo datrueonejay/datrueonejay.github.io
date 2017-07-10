@@ -24,6 +24,10 @@ body {
   background-color: #374785;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .fillHeight {
   height: 100%;
 }
@@ -67,7 +71,7 @@ body {
 }
 
 #aboutMe {
-  padding: 0 0 0 1.5vmin;
+  padding: 0 0 0 0;
   margin: 0;
 }
 
@@ -204,6 +208,10 @@ body {
     text-align: left;
     font-size: 1em;
     display: block;
+  }
+
+  #aboutMe {
+    padding: 0 0 0 1.5vmin;
   }
 
 
