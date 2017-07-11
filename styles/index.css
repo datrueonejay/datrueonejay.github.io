@@ -11,6 +11,7 @@
 html {
   height: 100%;
   background-color: #374785;
+  overflow-y: scroll;
 }
 
 img {
@@ -30,6 +31,10 @@ a:hover {
 
 .fillHeight {
   height: 100%;
+}
+
+.fillWidth {
+  width: 100%;
 }
 
 .filler {
