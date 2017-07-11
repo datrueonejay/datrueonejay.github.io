@@ -6,61 +6,34 @@ $(document).ready(function() {
   });
   $("#footer").height((tallness/3));
   $("#footerDivideContainer").height((tallness/3));
+  $(".currNavPage").show();
 
-  // variable to hold the cur nav page
-  var currNavPage = "home";
 
-  $("#navHome").click(function() {
-    $("#edu, #proj, #exp").slideUp();
-    if (currNavPage != "home") {
+  $("#navHome, #navEdu, #navProj, #navExp").click(function() {
+    var classToShow = this.id.toString();
+    if (!($("." + classToShow).hasClass("currNavPage"))) {
+      $(".currNavPage").slideUp();
+      $(".currNavPage").removeClass("currNavPage");
+      $("." + classToShow).addClass("currNavPage");
       setTimeout(function() {
-        $("#home").slideDown();
-      }, 400);
+        $(".currNavPage").slideDown();
+      }, 350);
     }
-    $("#bodyContainer, html, body").animate({
-      "background-color": "#374785"
-    });
-    currNavPage = "home";
-  });
+    var colour;
+    if (classToShow == "navHome") {
+      colour = "#374785";
+    } else if (classToShow == "navEdu") {
+      colour = "#FF9A45";
+    } else if (classToShow == "navProj") {
+      colour = "#F76C6C";
+    } else {
+      colour = "#FEE64C";
+    }
 
-  $("#navEdu").click(function(){
-    $("#home, #proj, #exp").slideUp();
-    if (currNavPage != "edu") {
-      setTimeout(function() {
-        $("#edu").slideDown();
-      }, 400);
-    }
-    $("#bodyContainer, html, body").animate({
-      "background-color": "#FF9A45"
-    });
-    currNavPage = "edu";
-  });
-
-  $("#navProj").click(function(){
-    $("#home, #edu, #exp").slideUp();
-    if (currNavPage != "proj") {
-      setTimeout(function() {
-        $("#proj").slideDown();
-      }, 400);
-    }
-    $("#bodyContainer, html, body").animate({
-      "background-color": "#F76C6C"
-    });
-    currNavPage = "proj";
-  });
-
-  $("#navExp").click(function(){
-    $("#home, #edu, #proj").slideUp();
-    if (currNavPage != "exp") {
-      setTimeout(function() {
-        $("#exp").slideDown();
-      }, 400);
-    }
     $("#bodyContainer, body, html").animate({
-      "background-color": "#FEE64C"
+      "background-color": colour
     });
-    currNavPage = "exp";
-
+    console.log(colour);
   });
 
 

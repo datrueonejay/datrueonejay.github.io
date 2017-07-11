@@ -85,7 +85,7 @@ a:hover {
   margin-right: 0;
 }
 
-.navPage {
+.navTab {
   cursor: pointer;
 }
 
@@ -105,7 +105,7 @@ a:hover {
   background-color: #FEE64C;
 }
 
-.navPic {
+.navPage {
   display: none;
 }
 
@@ -133,8 +133,8 @@ a:hover {
   background-color: none;
 }
 
-.carouselImage {
-  width: 100%;
+.navEntry {
+  text-align: center;
 }
 
 #footer {
@@ -169,6 +169,8 @@ a:hover {
 .test {
   background-color: yellow;
 }
+
+
 
 
 /* s size*/
