@@ -66,23 +66,39 @@ a:hover {
 
 #contactInfo, #name {
   text-align: center;
+  padding-top: 1.5vmin;
 }
 
 #bodyContainer {
   padding-top: 0;
   display: flex;
-  overflow-y: visible;
   height: 100%;
 }
 
+#bodyRowContainer {
+  display: flex;
+  flex-flow: column;
+
+}
+
+.sideBar {
+  order: 2;
+}
+
+.entryDate, .entrySub {
+
+}
+
 #aboutMe {
-  padding: 0 0 0 0;
+  order: 1;
+  padding: 0;
   margin: 0;
 }
 
 .pagesBar {
   margin-top: 0;
   margin-right: 0;
+
 }
 
 .navTab {
@@ -107,6 +123,38 @@ a:hover {
 
 .navPage {
   display: none;
+}
+
+.navEntry {
+  cursor: pointer;
+}
+
+.navEntryInfo {
+  display: none;
+}
+
+.entryTitle {
+  font-size: 1.2em;
+}
+
+.entryDate, .entrySub {
+  font-size: 0.9em;
+}
+
+.entryDate {
+  float: right;
+}
+
+.entrySub {
+  float: left;
+}
+
+.entryDetails {
+  font-size: 0.8em;
+  padding-left: 3vmin;
+}
+
+.navEntryInfo {
 }
 
 #home {
@@ -206,6 +254,17 @@ a:hover {
     border-left: #24305E solid 1.5vmin;
   }
 
+  #bodyRowContainer {
+    flex-flow: row;
+  }
+
+  .sideBar {
+    order: 1;
+  }
+
+  #aboutMe {
+    order: 2;
+  }
 
   .skillsTitle {
     text-align: left;
@@ -215,6 +274,10 @@ a:hover {
     text-align: left;
     font-size: 1em;
     display: block;
+  }
+
+  .entryDate, .entrySub {
+    float: none;
   }
 
   #aboutMe {

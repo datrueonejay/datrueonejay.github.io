@@ -24,35 +24,58 @@
 
     <div  class="container-fluid" style="width:100%">
       <div class="row fillHeight" id="leftDivideContainer">
-        <div class="col-xs-9 fillHeight col-xs-offset-3" id="leftDivide"></div>
+        <div class="col-xs-8 fillHeight col-xs-offset-4" id="leftDivide"></div>
       </div>
     </div>
 
     <div class="header container-fluid" id="header">
       <div class="row">
         <div class="col-sm-8 headingSection" id="name"><div>Jayden Arquelada</div></div>
-        <div class="col-sm-4 headingSection" id="contactInfo"><div>(647) 268-0248<br>
-          jayden.arquelada@mail.utoronto.ca</div>
+        <div class="col-sm-4 headingSection" id="contactInfo">
+          <h4>(647) 268-0248<br>
+          jayden.arquelada@mail.utoronto.ca</h4>
         </div>
       </div>
     </div>
 
     <div class="container-fluid fillHeight" id="bodyContainer">
-      <div class="row">
+      <div class="row" id="bodyRowContainer">
 
-        <div class="col-sm-3 text-center">
-          <div class="navHome currNavPage navPage fillWidth" id="descriptionMe">A second year student at the University of Toronto
+        <div class="col-sm-4 sideBar">
+
+          <div class="currEntry fillWidth intro">A second year student at the University of Toronto
             Scarborough Campus. A young passionate, music loving developer. A manga
             reading, app loving, puzzle solving, one of a kind. But you can just call
             me, Jayden.
             <img src="#">
           </div>
-          <div class="navEdu navPage fillWidth" id="descriptionMe">
+
+          <div class="fillWidth navEntryInfo utsc">
+            <div class="entryTitle">Univeristy of Toronto Scarborough</div>
+            <div class="entryDate">September 2016-Present</div>
+            <div class="entrySub">Candidate, Honours Bachelor of Science</div><br>
+            <ul class="entryDetails">
+              <li>Computer Science Co-Op Program, 2nd Year</li><br>
+              <li>Specializing in Software Engineering</li><br>
+              <li>CGPA of 3.78/4.00</li><br>
+              <li>Recipient of President's Entrance Scholarship</li>
+            </ul>
           </div>
-          <div class="navProj navPage fillWidth" id="descriptionMe">About projects
+
+          <div class="fillWidth navEntryInfo libermann">
+            <div class="entryTitle">Francis Libermann Catholic High School</div>
+            <div class="entryDate">September 2012-June 2016</div>
+            <div class="entrySub">Ontario Secondary School Diploma</div><br>
+            <ul class="entryDetails">
+              <li>Honour's Society and Ontario Scholar Award</li><br>
+              <li>Math Science and Technology (MST) Program Certificate</li><br>
+            </ul>
+          </div>
+
+          <div class="fillWidth navEntryInfo">About projects
             <img src="#">
           </div>
-          <div class="navExp navPage fillWidth" id="descriptionMe">About experiences
+          <div class="fillWidth navEntryInfo">About experiences
             <img src="#">
           </div>
       <!-- <div class="skillsTitle">Technical
@@ -76,7 +99,7 @@
       </ul> -->
         </div>
 
-        <div class="col-sm-9 fillHeight" id="aboutMe">
+        <div class="col-sm-8 fillHeight" id="aboutMe">
 
           <div class="pagesBar fillWidth">
             <div class="navTab col-sm-3" id="navHome">Home</div>
@@ -85,20 +108,20 @@
             <div class="navTab col-sm-3" id="navExp">Experiences</div>
           </div>
 
-          <div class="fillHeight fillWidth">
+          <div class="fillWidth">
             <div class="navPage text-center currNavPage navHome" id="home">Thanks for visitng my site!
-            This is currently a work in progress!</div>
+            This is currently a work in progress! Special thanks to my brother Ashton for the
+          domain name.</div>
 
 
             <div class="navPage fillWidth navEdu" id="edu">
               <div class="text-center">Click a picture to learn more about it</div>
               <div class="row">
-                <a><div class="col-sm-4 col-sm-offset-1 navEntry"><img class="fillWidth" src="images/utscLogo.png">
-                University of Toronto Scarborough</div></a>
-                <a><div class="col-sm-4 col-sm-offset-2 navEntry"><img class="fillWidth" src="images/utscLogo.png">
-                Francis Libermann Catholic High School</div></a>
+                <div class="col-xs-4 col-xs-offset-1 navEntry" id="utsc"><img class="fillWidth" src="images/utscLogo.png">
+                University of Toronto Scarborough</div>
+                <div class="col-xs-4 col-xs-offset-2 navEntry" id="libermann"><img class="fillWidth" src="images/utscLogo.png">
+                Francis Libermann Catholic High School</div>
               </div>
-              <div class="text-center">Click to find out more about the education I've received.</div>
             </div>
 
             <div class="navPage fillWidth navProj" id="proj">
