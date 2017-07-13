@@ -12,7 +12,6 @@ $(document).ready(function() {
   });
   $(".currNavPage").show();
 
-
   $(".navTab").click(function() {
     var navPage = this.id.toString();
     if (!($("." + navPage).hasClass("currNavPage"))) {

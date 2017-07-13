@@ -37,6 +37,15 @@ a:hover {
   width: 100%;
 }
 
+.modal {
+  padding-right: 0;
+}
+
+.modal-content{
+  background-color: #374785;
+
+}
+
 .filler {
   position: relative;
   width: 100%;
@@ -64,6 +73,17 @@ a:hover {
   font-size: 2.5em;
 }
 
+#contactInfo {
+  padding: 0 0 1.5vmin 3vmin;
+  font-size: 1.5em;
+  border: none;
+}
+
+#contactInfo:hover {
+  cursor: pointer;
+  background-color: #3E61E6;
+}
+
 #contactInfo, #name {
   text-align: center;
   padding-top: 1.5vmin;
@@ -89,9 +109,15 @@ a:hover {
 
 }
 
+.modal-open {
+padding-right: 0 !important;
+}
+
 #aboutMe {
+  margin-right: 0;
   order: 1;
   padding: 0;
+  padding-right: 0;
   margin: 0;
 }
 
