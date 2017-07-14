@@ -105,20 +105,13 @@ a:hover {
   order: 2;
 }
 
-.entryDate, .entrySub {
-
-}
-
 .modal-open {
 padding-right: 0 !important;
 }
 
 #aboutMe {
-  margin-right: 0;
   order: 1;
   padding: 0;
-  padding-right: 0;
-  margin: 0;
 }
 
 .pagesBar {
@@ -167,12 +160,14 @@ padding-right: 0 !important;
   font-size: 0.9em;
 }
 
+.entrySub {
+  margin-bottom: 1.5vmin;
+}
+
 .entryDate {
-  float: right;
 }
 
 .entrySub {
-  float: left;
 }
 
 .entryDetails {

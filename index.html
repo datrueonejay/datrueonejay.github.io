@@ -40,7 +40,7 @@
     </div>
 
     <!-- Dividing column-->
-    <div  class="container-fluid" style="width:100%">
+    <div  class="container-fluid fillWidth">
       <div class="row fillHeight" id="leftDivideContainer">
         <div class="col-xs-8 fillHeight col-xs-offset-4" id="leftDivide"></div>
       </div>
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="container-fluid fillHeight" id="bodyContainer">
+    <div class="container-fluid" id="bodyContainer">
       <div class="row" id="bodyRowContainer">
 
         <div class="col-sm-4 sideBar">
@@ -73,11 +73,11 @@
           <div class="fillWidth navEntryInfo utsc">
             <div class="entryTitle">Univeristy of Toronto Scarborough</div>
             <div class="entryDate">September 2016-Present</div>
-            <div class="entrySub">Candidate, Honours Bachelor of Science</div><br>
+            <div class="entrySub">Candidate, Honours Bachelor of Science</div>
             <ul class="entryDetails">
-              <li>Computer Science Co-Op Program, 2nd Year</li><br>
-              <li>Specializing in Software Engineering</li><br>
-              <li>CGPA of 3.78/4.00</li><br>
+              <li>Computer Science Co-Op Program, 2nd Year</li>
+              <li>Specializing in Software Engineering</li>
+              <li>CGPA of 3.78/4.00</li>
               <li>Recipient of President's Entrance Scholarship</li>
             </ul>
           </div>
@@ -85,16 +85,43 @@
           <div class="fillWidth navEntryInfo libermann">
             <div class="entryTitle">Francis Libermann Catholic High School</div>
             <div class="entryDate">September 2012-June 2016</div>
-            <div class="entrySub">Ontario Secondary School Diploma</div><br>
+            <div class="entrySub">Ontario Secondary School Diploma</div>
             <ul class="entryDetails">
-              <li>Honour's Society and Ontario Scholar Award</li><br>
-              <li>Math Science and Technology (MST) Program Certificate</li><br>
+              <li>Honour's Society and Ontario Scholar Award</li>
+              <li>Math Science and Technology (MST) Program Certificate</li>
             </ul>
           </div>
 
-          <div class="fillWidth navEntryInfo">About projects
-            <img src="#">
+          <div class="fillWidth navEntryInfo website">
+            <div class="entryTitle">jayquelada.com</div>
+            <div class="entryDate">May 2016 - Present</div>
+            <div class="entrySub">Personal Website</div>
+            <ul class="entryDetails">
+              <li>Desiging this site using HTML, CSS, and JavaScript (jQuery)</li>
+              <li>All code is recorded and tracked on Git and GitHub</li>
+            </ul>
           </div>
+
+          <div class="fillWidth navEntryInfo littleFingers">
+            <div class="entryTitle">Little Fingers</div>
+            <div class="entryDate">May 2016 - Present</div>
+            <div class="entrySub">Android Application</div>
+            <ul class="entryDetails">
+              <li>Developing </li>
+              <li></li>
+            </ul>
+          </div>
+
+          <div class="fillWidth navEntryInfo sequence">
+            <div class="entryTitle">Sequence</div>
+            <div class="entryDate">Januaray 2016 - May 2016</div>
+            <div class="entrySub">Android Game</div>
+            <ul class="entryDetails">
+              <li>Developed and released an Android game on the Google Play Store</li>
+              <li>Try to figure out the sequence of each level</li>
+            </ul>
+          </div>
+
           <div class="fillWidth navEntryInfo">About experiences
             <img src="#">
           </div>
@@ -119,7 +146,7 @@
       </ul> -->
         </div>
 
-        <div class="col-sm-8 fillHeight" id="aboutMe">
+        <div class="col-sm-8" id="aboutMe">
 
           <div class="pagesBar fillWidth">
             <div class="navTab col-sm-3" id="navHome">Home</div>
@@ -131,30 +158,39 @@
           <div class="fillWidth">
             <div class="navPage text-center currNavPage navHome" id="home">Thanks for visitng my site!
             This is currently a work in progress! Special thanks to my brother Ashton for the
-          domain name.</div>
+          domain name.
+            </div>
 
 
-            <div class="navPage fillWidth navEdu" id="edu">
+            <div class="navPage fillWidth navEdu row" id="edu">
               <div class="text-center">Click a picture to learn more about it</div>
-              <div class="row">
-                <div class="col-xs-4 col-xs-offset-1 navEntry" id="utsc"><img class="fillWidth" src="images/utscLogo.png">
-                University of Toronto Scarborough</div>
-                <div class="col-xs-4 col-xs-offset-2 navEntry" id="libermann"><img class="fillWidth" src="images/utscLogo.png">
-                Francis Libermann Catholic High School</div>
-              </div>
+              <div class="col-xs-4 col-xs-offset-1 navEntry" id="utsc"><img class="fillWidth" src="images/utscLogo.png">
+              University of Toronto Scarborough</div>
+              <div class="col-xs-4 col-xs-offset-2 navEntry" id="libermann"><img class="fillWidth" src="images/utscLogo.png">
+              Francis Libermann Catholic High School</div>
             </div>
 
             <div class="navPage fillWidth navProj" id="proj">
-              <div class="row">
-              <div class="text-center col-sm-12">Click to find out more about my personal projects.</div>
-              </div>
+              <div class="text-center">Click a picture to learn more about it</div>
+              <div class="col-xs-4 col-xs-offset-1 navEntry" id="website"><img class="fillWidth" src="images/utscLogo.png">
+              This Website</div>
+              <div class="col-xs-4 col-xs-offset-2 navEntry" id="littleFingers"><img class="fillWidth" src="images/utscLogo.png">
+              Little Fingers Android App</div>
+              <div class="col-xs-4 col-xs-offset-4 navEntry" id="sequence"><img class="fillWidth" src="images/utscLogo.png">
+              Sequence Android Game</div>
             </div>
 
-            <div class="navPage fillWidth navExp" id="exp" href="experience.html">
-              <img class="fillWidth" src="images/skills2.png">
-              <div class="text-center">Click to find out more about my experiences.</div>
+            <div class="navPage fillWidth navExp row" id="exp">
+              <div class="text-center">Click a picture to learn more about it</div>
+              <div class="col-xs-4 col-xs-offset-1 navEntry" id="website"><img class="fillWidth" src="images/utscLogo.png">
+              Tutor at Star My Kid</div>
+              <div class="col-xs-4 col-xs-offset-2 navEntry" id="littleFingers"><img class="fillWidth" src="images/utscLogo.png">
+              Tutor for TCDSB</div>
             </div>
+
           </div>
+
+
 
         </div>
 
