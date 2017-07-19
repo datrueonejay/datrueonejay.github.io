@@ -4,7 +4,6 @@
   color: #FFF;
   font-family: 'Poppins', sans-serif;
   word-wrap: break-word;
-
 }
 
 
@@ -15,8 +14,6 @@ html {
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 body {
@@ -43,7 +40,6 @@ a:hover {
 
 .modal-content{
   background-color: #374785;
-
 }
 
 .filler {
@@ -56,7 +52,6 @@ a:hover {
 
 
 .row {
-
 }
 
 .header {
@@ -77,11 +72,17 @@ a:hover {
   padding: 0 0 1.5vmin 3vmin;
   font-size: 1.5em;
   border: none;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
 }
 
 #contactInfo:hover {
   cursor: pointer;
-  background-color: #3E61E6;
+  background-color: #24305E;
 }
 
 #contactInfo, #name {
@@ -126,18 +127,54 @@ padding-right: 0 !important;
 
 #navHome {
   background-color: #374785;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+#navHome:hover {
+  background-color: #24305E;
 }
 
 #navEdu {
   background-color: #FF9A45;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+#navEdu:hover {
+  background-color: #EF6D00;
 }
 
 #navProj {
   background-color: #F76C6C;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+#navProj:hover {
+  background-color: #D81414;
 }
 
 #navExp {
   background-color: #FEE64C;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+#navExp:hover {
+  background-color: #F3D203;
 }
 
 .navPage {
@@ -217,7 +254,7 @@ padding-right: 0 !important;
   padding: 1vmin 0;
 }
 
-#footerFiller {
+#footer {
 }
 
 
@@ -226,13 +263,27 @@ padding-right: 0 !important;
 
 .picLinkContainer {
   text-align: center;
+  padding: 0;
 }
 
 .picLinkAnchor {
+  margin: 0;
+
 }
 
 .picLink {
   display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.picLink:hover {
+  max-height: 150%;
 }
 
 .test {
@@ -321,3 +372,5 @@ padding-right: 0 !important;
     font-size: 20px;
   }
 }
+
+/* Animations*/
