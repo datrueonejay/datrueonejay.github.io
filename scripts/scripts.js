@@ -1,15 +1,15 @@
 $(document).ready(function() {
   $(".headingSection").matchHeight();
   var tallness = $("#header").outerHeight(true);
-  $("body").css({
-    "padding-top": tallness
-  });
+  // $("body").css({
+  //   "padding-top": tallness
+  // });
   $("#footer").height((tallness/3));
   $("#footerDivideContainer").height((tallness/3));
-  $("#bodyContainer").css({
-    "margin-bottom" : tallness,
-    "padding-bottom" : tallness
-  });
+  // $("#bodyContainer").css({
+  //   "margin-bottom" : tallness,
+  //   "padding-bottom" : tallness
+  // });
   $(".currNavPage").show();
 
   $(".navTab").click(function() {
@@ -62,13 +62,13 @@ $(document).ready(function() {
 
   });
 
-
-  $(window).resize(function(){
-    var tallness = $("#header").outerHeight(true);
-    $("body").css({
-      "padding-top": tallness
-    });
-    console.log(tallness);
-    console.log($("#headerFiller").height());
-  });
+  //
+  // $(window).resize(function(){
+  //   var tallness = $("#header").outerHeight(true);
+  //   $("body").css({
+  //     "padding-top": tallness
+  //   });
+  //   console.log(tallness);
+  //   console.log($("#headerFiller").height());
+  // });
 });
