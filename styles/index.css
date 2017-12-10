@@ -50,6 +50,9 @@ a:hover {
 #headerFiller {
 }
 
+#contactInfo:hover {
+  cursor: pointer;
+}
 
 .row {
 }
@@ -72,6 +75,7 @@ a:hover {
 
 #name {
   font-size: 2.5em;
+  padding-left: 3vmin;
 }
 
 #contactInfo {
@@ -85,10 +89,7 @@ a:hover {
   transition:.5s;
 }
 
-#contactInfo:hover {
-  cursor: pointer;
-  background-color: #24305E;
-}
+
 
 #contactInfo, #name {
   text-align: center;
@@ -99,7 +100,7 @@ a:hover {
   padding-top: 0;
   display: flex;
   height: 100%;
-  margin-top: 100px;
+  margin-top: 99px;
 }
 
 #bodyRowContainer {
@@ -122,7 +123,6 @@ padding-right: 0 !important;
 }
 
 .pagesBar {
-  margin-top: 0;
   margin-right: 0;
 
 }
@@ -140,10 +140,6 @@ padding-right: 0 !important;
   transition:.5s;
 }
 
-#navHome:hover {
-  background-color: #24305E;
-}
-
 #navEdu {
   background-color: #FF9A45;
   -o-transition:.5s;
@@ -153,9 +149,7 @@ padding-right: 0 !important;
   transition:.5s;
 }
 
-#navEdu:hover {
-  background-color: #EF6D00;
-}
+
 
 #navProj {
   background-color: #F76C6C;
@@ -166,9 +160,7 @@ padding-right: 0 !important;
   transition:.5s;
 }
 
-#navProj:hover {
-  background-color: #D81414;
-}
+
 
 #navExp {
   background-color: #FEE64C;
@@ -177,10 +169,6 @@ padding-right: 0 !important;
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
-}
-
-#navExp:hover {
-  background-color: #F3D203;
 }
 
 .navPage {
@@ -288,10 +276,6 @@ padding-right: 0 !important;
   transition:.5s;
 }
 
-.picLink:hover {
-  max-height: 125%;
-}
-
 .test {
   background-color: yellow;
 }
@@ -313,11 +297,31 @@ padding-right: 0 !important;
     height: 90px;
   }
 
+  #navHome:hover {
+    background-color: #24305E;
+  }
+
+  #navEdu:hover {
+    background-color: #EF6D00;
+  }
+
+  #navProj:hover {
+    background-color: #D81414;
+  }
+
+  #navExp:hover {
+    background-color: #F3D203;
+  }
+
   #name {
   }
 
   #contactInfo {
     border-left: #24305E solid 1.5vmin;
+  }
+
+  #contactInfo:hover {
+    background-color: #24305E;
   }
 
   #contactInfo, #name {
@@ -374,6 +378,9 @@ padding-right: 0 !important;
     padding: 0 0 0 1.5vmin;
   }
 
+  .picLink:hover {
+    max-height: 125%;
+  }
 
 }
 
