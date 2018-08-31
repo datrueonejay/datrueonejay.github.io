@@ -2,7 +2,7 @@
   "name": "github-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://datrueonejay.github.io",
+  "homepage": "http://datrueonejay.github.io",
   "dependencies": {
     "ghpages": "0.0.10",
     "react": "^16.4.2",
