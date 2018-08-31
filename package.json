@@ -1,0 +1,20 @@
+{
+  "name": "github-test",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://datrueonejay.github.io",
+  "dependencies": {
+    "ghpages": "0.0.10",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
