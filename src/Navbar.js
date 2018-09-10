@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
-const style = {
-  position: 'absolute',
-  bottom: 0
-};
+
 
 export default class Navbar extends Component {
   render() {
     return(
-      <Container style={style}>
-        <Row>
-        <Col xs='4'>Back</Col>
-        <Col xs='4'>Home</Col>
-        <Col xs='4'>Recents</Col>
-
+      <Container fluid className='Navbar'>
+        <Row className='Navbar'>
+        <Col xs='4' className='NavBarItem'>
+          <img className='NavBarButton' src={require('./images/back.png')}/>
+        </Col>
+        <Col xs='4' className='NavBarItem'>
+          <img className='NavBarButton' src={require('./images/home.png')}/>
+        </Col>
+        <Col xs='4' className='NavBarItem'>
+          <img className='NavBarButton' src={require('./images/recent.png')}/>
+        </Col>
         </Row>
       </Container>
     );
