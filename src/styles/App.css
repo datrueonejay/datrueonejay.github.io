@@ -75,15 +75,16 @@ body {
 }
 
 .DockIconAnchor {
-  flex-grow: 1;
   margin: 0 20px;
-  border-bottom: 10px;
-  border-color: #FFFFFF;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
 }
 
 .DockIcon {
-  background-color: #000090;
   padding: auto 0;
   max-width: 100%;
   max-height: 100%;
@@ -202,7 +203,6 @@ body {
 
 }
 
-
 /* lg size*/
 @media only screen and (min-width: 992px) {
   #root {
@@ -254,13 +254,12 @@ body {
 
   .Dock {
     padding: 30px 10px 70px 0;
-    background-color: #900000;
   }
 
   .DockIconAnchor {
     width: 100px;
     height: 100px;
-    background-color: #009000;
+
   }
 
   .NavBarButton {
