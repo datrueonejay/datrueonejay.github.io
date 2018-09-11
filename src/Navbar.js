@@ -9,13 +9,13 @@ export default class Navbar extends Component {
       <Container fluid className='Navbar'>
         <Row className='Navbar'>
         <Col xs='4' className='NavBarItem'>
-          <img className='NavBarButton' src={require('./images/back.png')}/>
+          <img className='NavBarButton' id='Back' src={require('./images/back.png')}/>
         </Col>
         <Col xs='4' className='NavBarItem'>
-          <img className='NavBarButton' src={require('./images/home.png')}/>
+          <img className='NavBarButton' id='Home' src={require('./images/home.png')}/>
         </Col>
         <Col xs='4' className='NavBarItem'>
-          <img className='NavBarButton' src={require('./images/recent.png')}/>
+          <img className='NavBarButton' id='Recents' src={require('./images/recent.png')}/>
         </Col>
         </Row>
       </Container>

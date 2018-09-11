@@ -11,6 +11,8 @@ html {
 body {
   height: 100%;
   width: 100%;
+  background: url("https://i.stack.imgur.com/7vMmx.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 #root {
@@ -27,14 +29,17 @@ body {
 }
 
 .StatusBar {
+  position: fixed;
   width: 100%;
   background-color: #000000;
   color: #FFFFFF;
   padding: 0 10px;
+  z-index: 100;
 }
 
 .Name {
   display: inline;
+  font-size: 1em;
 }
 
 .Icons {
@@ -45,10 +50,43 @@ body {
 .StatusBarIcon {
   height: 15px;
   width: 15px;
+  margin: 0 5px 4px 5px;
+}
+
+.TimeIcon {
+  margin: 0 5px;
 }
 
 #HomeScreen {
   padding: 50px 0 0 0;
+}
+
+#Screen {
+  padding: 0 0;
+}
+
+.Dock {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  bottom: 0;
+  padding-bottom: 60px;
+}
+
+.DockIconAnchor {
+  flex-grow: 1;
+  margin: 0 20px;
+  border-bottom: 10px;
+  border-color: #FFFFFF;
+  z-index: 1000;
+}
+
+.DockIcon {
+  background-color: #000090;
+  padding: auto 0;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .Navbar {
@@ -59,17 +97,22 @@ body {
   background-color: #000000;
 }
 
-.Yellow {
-  background-color: #E7DB1D;
-  margin: 0 0;
-  padding: 0 0;
+.NavBarButton {
+  height: 20px;
+  width: 20px;
+  display: block;
 }
 
-.NavBarButton {
-  height: 25px;
-  width: 25px;
+#Back {
+  margin: 0 40% 0 60%;
+}
+
+#Home {
   margin: 0 auto;
-  display: block;
+}
+
+#Recents {
+  margin: 0 60% 0 40%;
 }
 
 .AppIcon {
@@ -85,44 +128,145 @@ body {
   color: #FFFFFF;
 }
 
-.Test {
-  padding: 0 0;
-  background-color: #009000;
-}
-
-#Screen {
-  background: url("https://i.stack.imgur.com/7vMmx.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
 /* s size*/
 @media (min-width: 576px) {
+  #root {
+    font-size: 17px;
+  }
+
+  .StatusBarIcon {
+    height: 16px;
+    width: 16px;
+  }
+
   .AppIcon {
     width: 75px;
     height: 75px;
   }
+
+  .Dock {
+    padding-bottom: 65px;
+  }
+
+  .DockIcon {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .NavBarButton {
+    height: 25px;
+    width: 25px;
+    display: block;
+  }
+
 }
 
 /* m size*/
 @media only screen and (min-width: 768px) {
+  #root {
+    font-size: 18px;
+  }
+
+  .StatusBarIcon {
+    height: 17px;
+    width: 17px;
+  }
+
   .AppIcon {
     width: 100px;
     height: 100px;
   }
+
+  .Dock {
+    padding: 27px 20px 60px 0;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    width: auto;
+    right: 0px;
+  }
+
+  .DockIconAnchor {
+    margin: default default;
+    width: 80px;
+    height: 80px;
+    float: right;
+    padding: 0 0;
+  }
+
+  .NavBarButton {
+    height: 30px;
+    width: 30px;
+    display: block;
+  }
+
 }
+
 
 /* lg size*/
 @media only screen and (min-width: 992px) {
+  #root {
+    font-size: 19px;
+  }
+
+  .StatusBarIcon {
+    height: 18px;
+    width: 18px;
+  }
+
   .AppIcon {
     width: 125px;
     height: 125px;
   }
+
+  .Dock {
+    padding: 28px 20px 65px 0;
+  }
+
+  .DockIconAnchor {
+    width: 90px;
+    height: 90px;
+  }
+
+  .NavBarButton {
+    height: 35px;
+    width: 35px;
+    display: block;
+  }
+
 }
 
 /* xl size*/
 @media only screen and (min-width: 1200px) {
+  #root {
+    font-size: 21px;
+  }
+
+  .StatusBarIcon {
+    height: 20px;
+    width: 20px;
+  }
+
   .AppIcon {
     width: 125px;
     height: 125px;
   }
+
+  .Dock {
+    padding: 30px 10px 70px 0;
+    background-color: #900000;
+  }
+
+  .DockIconAnchor {
+    width: 100px;
+    height: 100px;
+    background-color: #009000;
+  }
+
+  .NavBarButton {
+    height: 40px;
+    width: 40px;
+    display: block;
+  }
+
 }

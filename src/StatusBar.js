@@ -11,7 +11,7 @@ export default class Navbar extends Component {
           <img className='StatusBarIcon' src={require('./images/wifi.png')}/>
           <img className='StatusBarIcon' src={require('./images/cellular.png')}/>
           <img className='StatusBarIcon' src={require('./images/battery.png')}/>
-          <Clock format={'h:mm'} ticking={true} timezone={'Canada/Eastern'} />
+          <Clock className='StatusBarIcon TimeIcon' format={'h:mm'} ticking={true} timezone={'Canada/Eastern'} />
         </div>
       </div>
     );
