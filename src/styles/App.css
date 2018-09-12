@@ -61,10 +61,6 @@ body {
   padding: 50px 0 0 0;
 }
 
-#Screen {
-  padding: 0 0;
-}
-
 .Dock {
   position: fixed;
   display: flex;
@@ -75,13 +71,63 @@ body {
 }
 
 .DockIconAnchor {
-  margin: 0 20px;
+  margin: 0 10px;
   width: 80px;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+.DockIcon {
+  padding: auto 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Screen {
+  z-index: 10000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.AppRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.AppIconAnchor {
+  margin: 50px 10px 0 10px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1000;
+}
+
+.AppIcon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.AppName {
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 0.8em;
+}
+
+.Dock {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  bottom: 0;
+  padding-bottom: 60px;
 }
 
 .DockIcon {
@@ -116,19 +162,6 @@ body {
   margin: 0 60% 0 40%;
 }
 
-.AppIcon {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  display: block;
-}
-
-.AppName {
-  display: block;
-  text-align: center;
-  color: #FFFFFF;
-}
-
 /* s size*/
 @media (min-width: 576px) {
   #root {
@@ -140,9 +173,8 @@ body {
     width: 16px;
   }
 
-  .AppIcon {
-    width: 75px;
-    height: 75px;
+  .AppIconAnchor {
+    margin: 51px 0 0 0;
   }
 
   .Dock {
@@ -173,13 +205,8 @@ body {
     width: 17px;
   }
 
-  .AppIcon {
-    width: 100px;
-    height: 100px;
-  }
-
   .Dock {
-    padding: 27px 20px 60px 0;
+    padding: 31px 20px 60px 0;
     height: 100%;
     position: absolute;
     flex-direction: column;
@@ -193,6 +220,35 @@ body {
     height: 80px;
     float: right;
     padding: 0 0;
+  }
+
+  .Screen {
+    padding-right: 120px;
+  }
+
+  .AppRow {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .AppIconAnchor {
+    margin: 52px 20px 0 0;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+  }
+
+  .AppIcon {
+    display: block;
+    padding: auto 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .AppName {
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
   }
 
   .NavBarButton {
@@ -214,16 +270,15 @@ body {
     width: 18px;
   }
 
-  .AppIcon {
-    width: 125px;
-    height: 125px;
+  .Screen {
+    padding-right: 130px;
   }
 
   .Dock {
-    padding: 28px 20px 65px 0;
+    padding: 32px 20px 65px 0;
   }
 
-  .DockIconAnchor {
+  .DockIconAnchor, .AppIconAnchor {
     width: 90px;
     height: 90px;
   }
@@ -247,13 +302,8 @@ body {
     width: 20px;
   }
 
-  .AppIcon {
-    width: 125px;
-    height: 125px;
-  }
-
   .Dock {
-    padding: 30px 10px 70px 0;
+    padding: 34px 10px 70px 0;
   }
 
   .DockIconAnchor {
