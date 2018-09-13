@@ -1,12 +1,18 @@
 {
-  "main.css": "static/css/main.1b5c8816.css",
-  "main.css.map": "static/css/main.1b5c8816.css.map",
-  "main.js": "static/js/main.a66da971.js",
-  "main.js.map": "static/js/main.a66da971.js.map",
+  "main.css": "static/css/main.01685315.css",
+  "main.css.map": "static/css/main.01685315.css.map",
+  "main.js": "static/js/main.0099611d.js",
+  "main.js.map": "static/js/main.0099611d.js.map",
+  "static\\media\\appDrawer.png": "static/media/appDrawer.51b5c06e.png",
   "static\\media\\back.png": "static/media/back.fd0baec2.png",
+  "static\\media\\education.png": "static/media/education.01b1dde6.png",
+  "static\\media\\experience.png": "static/media/experience.d349dab6.png",
   "static\\media\\github.png": "static/media/github.2e5942e4.png",
   "static\\media\\home.png": "static/media/home.85b0d28a.png",
+  "static\\media\\linkedIn.png": "static/media/linkedIn.05bb0733.png",
   "static\\media\\logo.svg": "static/media/logo.ee7cd8ed.svg",
+  "static\\media\\playstore.png": "static/media/playstore.24902441.png",
+  "static\\media\\projects.png": "static/media/projects.ef8cb1ce.png",
   "static\\media\\recent.png": "static/media/recent.992a1a8a.png",
   "static\\media\\wifi.png": "static/media/wifi.74701295.png"
 }
