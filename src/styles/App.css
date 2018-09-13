@@ -169,28 +169,58 @@ body {
   height: 100%;
   background-color: #1c1b1b;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .Text {
   border-radius: 10px;
   display: inline-block;
-  padding: 5px 5px;
+  padding: 5px 10px;
   margin: 10px 5px;
   max-width: 70%;
-  width: auto;
+  word-wrap: break-word;
 }
 
 .LeftText {
   background-color: #ea7235;
   color: #FFFFFF;
-  align-self: flex-start;
   text-align: left;
+  align-self: flex-start;
 }
 
 .RightText {
   background-color: #FFFFFF;
   align-self: flex-end;
+}
+
+.TextInput {
+  padding-left: 1%;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #6b6c6d;
+  background-color: #FFFFFF;
+}
+
+.SendBtn {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.TextMessage {
+  height: 100%;
+  width: 94%;
+  display: inline;
+  border-width: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.InvisText {
+  visibility: hidden;
 }
 
 /* s size*/
@@ -226,6 +256,15 @@ body {
     height: 25px;
     width: 25px;
     display: block;
+  }
+
+  .TextInput {
+    height: 35px;
+  }
+
+  .SendBtn {
+    width: 35px;
+    height: 35px;
   }
 
 }
@@ -295,6 +334,16 @@ body {
     display: block;
   }
 
+  .TextInput {
+    height: 40px;
+  }
+
+  .SendBtn {
+    width: 40px;
+    height: 40px;
+    float: right;
+  }
+
 }
 
 /* lg size*/
@@ -330,6 +379,16 @@ body {
     height: 35px;
     width: 35px;
     display: block;
+  }
+
+  .TextInput {
+    height: 45px;
+  }
+
+  .SendBtn {
+    width: 45px;
+    height: 45px;
+    float: right;
   }
 
 }
@@ -369,4 +428,13 @@ body {
     display: block;
   }
 
+  .TextInput {
+    height: 50px;
+  }
+
+  .SendBtn {
+    width: 50px;
+    height: 50px;
+    float: right;
+  }
 }

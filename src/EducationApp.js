@@ -6,46 +6,48 @@ export default class EducationApp extends Component {
     super(props);
     this.messageRef = React.createRef();
     this.sendMessage = this.sendMessage.bind(this);
-    this.state = { messages : ["e", "e"]};
+    this.state = { messages : []};
   }
 
   render() {
 
-    var copy = this.state.messages.splice();
-    var i = -1;
-    var listItems = copy.map(function(message, index) {
-      i += 1;
-      return i % index == 0 ?  <div className='Text RightText'>even</div> : <div className='Text RightText'>odd</div>;
+    var listItems = this.state.messages.map(function(message, index) {
+      return index % 2 == 1 ?  <div className='Text RightText'>{message}</div> : <div className='Text LeftText'>{message}</div>;
     }
     );
-    console.log("rendering");
 
     return(
-
-
       <div className="Education">
-        <div className='Text RightText'>What school do you go to?</div>
-        <div className='Text LeftText'>University of Toronto, Scarborough</div>
-        <span className='Text RightText'>Oooo cool, what program you taking?</span>
-        <div className='Text LeftText'>I'm taking Computer Science, specializing in Software Engineering</div>
-        <div className='Text RightText'>What's your CGPA?</div>
-        <div className='Text LeftText'>3.77/4.00 atm</div>
-        {copy}
-
-        <div className='Text RightText'>Ay nice, when you graduating again?</div>
+        <div class="TextInput">
+          <form onSubmit={this.sendMessage} class="TextMessage">
+            <input type='text' placeholder='Message Jayden' ref={e => this.messageRef = e} class='TextMessage'/>
+          </form>
+          <img class="SendBtn" src={require('./images/send.png')} onClick={this.sendMessage}/>
+        </div>
+        <div className='Text InvisText'>Expecting to graduate in 2020</div>
+        {listItems}
         <div className='Text LeftText'>Expecting to graduate in 2020</div>
-        <form onSubmit={this.sendMessage}>
-        <input type='text' placeholder='Message Jayden' ref={e => this.messageRef = e}/>
-        </form>
+        <div className='Text RightText'>Ay nice, when you graduating again?</div>
+        <div className='Text LeftText'>3.77/4.00 atm</div>
+        <div className='Text RightText'>What's your CGPA?</div>
+        <div className='Text LeftText'>I'm taking Computer Science, specializing in Software Engineering</div>
+        <div className='Text RightText'>Which program are ya in?</div>
+        <div className='Text LeftText'>University of Toronto, Scarborough</div>
+        <div className='Text RightText'>What school do you go to?</div>
       </div>
     );
   }
 
   sendMessage(e) {
-    alert("hu");
     e.preventDefault();
-    console.log(this.messageRef.value);
-    this.messageRef.value = '';
-
+    var newMessages = this.state.messages.slice();
+    if (this.messageRef.value) {
+      newMessages.unshift(this.messageRef.value);
+      newMessages.unshift("one sec, lemme get back to you");
+      this.messageRef.value = '';
+      this.setState(state => (
+        {messages: newMessages}
+      ));
+    }
   }
 }
