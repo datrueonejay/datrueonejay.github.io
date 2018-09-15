@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EducationData from './Data/EducationData.json';
 
 export default class EducationApp extends Component {
 
@@ -24,16 +25,17 @@ export default class EducationApp extends Component {
           </form>
           <img class="SendBtn" src={require('./images/send.png')} onClick={this.sendMessage}/>
         </div>
-        <div className='Text InvisText'>Expecting to graduate in 2020</div>
+        <div className='Text InvisText'>Inivisible</div>
         {listItems}
-        <div className='Text LeftText'>Expecting to graduate in 2020</div>
+        <div className='Text LeftText'>Expecting to graduate in {EducationData.GraduatingYear}</div>
         <div className='Text RightText'>Ay nice, when you graduating again?</div>
-        <div className='Text LeftText'>3.77/4.00 atm</div>
+        <div className='Text LeftText'>{EducationData.GPA} atm</div>
         <div className='Text RightText'>What's your CGPA?</div>
-        <div className='Text LeftText'>I'm taking Computer Science, specializing in Software Engineering</div>
+        <div className='Text LeftText'>{EducationData.Program}</div>
         <div className='Text RightText'>Which program are ya in?</div>
-        <div className='Text LeftText'>University of Toronto, Scarborough</div>
+        <div className='Text LeftText'>{EducationData.School}</div>
         <div className='Text RightText'>What school do you go to?</div>
+        <div className='Text InvisText'>Inivisible</div>
       </div>
     );
   }
@@ -43,7 +45,7 @@ export default class EducationApp extends Component {
     var newMessages = this.state.messages.slice();
     if (this.messageRef.value) {
       newMessages.unshift(this.messageRef.value);
-      if (this.messageRef.value.includes("projects")) {
+      if (this.messageRef.value.toLowerCase().includes("proj")) {
         newMessages.unshift("Oh yeah I've made a few apps and this website!");
       } else {
         newMessages.unshift("one sec, lemme get back to you");
