@@ -43,7 +43,11 @@ export default class EducationApp extends Component {
     var newMessages = this.state.messages.slice();
     if (this.messageRef.value) {
       newMessages.unshift(this.messageRef.value);
-      newMessages.unshift("one sec, lemme get back to you");
+      if (this.messageRef.value.includes("projects")) {
+        newMessages.unshift("Oh yeah I've made a few apps and this website!");
+      } else {
+        newMessages.unshift("one sec, lemme get back to you");
+      }
       this.messageRef.value = '';
       this.setState(state => (
         {messages: newMessages}

@@ -203,8 +203,7 @@ body {
 }
 
 .SendBtn {
-  width: 30px;
-  height: 30px;
+  width: 8%;
   float: right;
 }
 
@@ -219,8 +218,20 @@ input:focus {
   outline: none;
 }
 
-.InvisText {
-  visibility: hidden;
+.ContactMeApp {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #900000;
+}
+
+.ContactImage {
+  height: 50%;
+}
+
+.ContactInfo {
+  height: 25%;
+  display: flex;
 }
 
 /* s size*/

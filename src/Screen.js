@@ -3,6 +3,7 @@ import MobileApp from './MobileApp';
 import Dock from './Dock';
 import Navbar from './Navbar';
 import EducationApp from './EducationApp';
+import ContactMeApp from './ContactMeApp';
 
 export default class Screen extends Component {
 
@@ -11,6 +12,7 @@ export default class Screen extends Component {
     this.state = {display: 'home'};
     this.showEducation = this.showEducation.bind(this);
     this.showHome = this.showHome.bind(this);
+    this.showContactMe = this.showContactMe.bind(this);
 
     this.home =
       <div className='AppRow'>
@@ -23,11 +25,14 @@ export default class Screen extends Component {
 
     this.education = <EducationApp/>;
 
+    this.contactMe = <ContactMeApp/>;
+
   }
 
-  test(e) {
-    alert("HIU");
-    e.preventDefault();
+  showContactMe() {
+    this.setState(state => (
+      {display: 'contactMe'}
+    ));
   }
 
   showHome() {
@@ -52,6 +57,9 @@ export default class Screen extends Component {
         case 'education':
           ret = this.education;
           break;
+        case 'contactMe':
+          ret = this.contactMe;
+          break;
         default:
           ret = this.home;
           break;
@@ -59,7 +67,7 @@ export default class Screen extends Component {
       return(
         <div className='Screen'>
           {ret}
-          {this.state.display == 'home' &&<Dock/>}
+          {this.state.display == 'home' &&<Dock contactMe={this.showContactMe}/>}
           <Navbar onBack={this.showHome} onHome={this.showHome}/>
         </div>
       );
