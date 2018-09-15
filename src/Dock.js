@@ -11,7 +11,7 @@ export default class Dock extends Component {
         <DockApp icon={require('./images/linkedIn.png')} link='https://www.linkedin.com/in/jayden-arquelada-b70186111/'/>
         <DockApp icon={require('./images/appDrawer.png')}/>
         <DockApp icon={require('./images/playstore.png')} link='https://play.google.com/store/search?q=datrueonejay&hl=en'/>
-        <DockApp icon={require('./images/gmail.png')} onClick={this.props.contactMe}/>
+        <DockApp icon={require('./images/contact.png')} onClick={this.props.contactMe}/>
       </div>
     );
   }

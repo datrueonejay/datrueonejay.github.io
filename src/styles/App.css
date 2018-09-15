@@ -74,6 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .DockIcon {
@@ -106,6 +107,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .AppIcon {
@@ -222,16 +224,45 @@ input:focus {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #900000;
 }
 
-.ContactImage {
+.ContactHalf {
   height: 50%;
 }
 
+.ContactImageDiv {
+  display: block;
+  background-color: #329FD5;
+}
+
+.ContactInfoContainer {
+  background-color: #f2f4f7;
+  padding: 10px 10px;
+}
+
+.ContactImage {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.ContactIcon {
+  height: 20px;
+  margin: 0 25px 0 5px;
+}
+
 .ContactInfo {
-  height: 25%;
   display: flex;
+  align-items: center;
+  background-color: #e6e8ed;
+  background-origin: padding-box;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.ContactEmail {
+  margin-bottom: 10px;
 }
 
 /* s size*/
@@ -282,6 +313,11 @@ input:focus {
     height: 35px;
   }
 
+  .ContactIcon {
+    height: 25px;
+    margin: 0 30px 0 10px;
+  }
+
 }
 
 /* m size*/
@@ -304,7 +340,7 @@ input:focus {
     padding: 31px 20px 60px 0;
     height: 100%;
     position: absolute;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: auto;
     right: 0px;
   }
@@ -359,6 +395,11 @@ input:focus {
     float: right;
   }
 
+  .ContactIcon {
+    height: 30px;
+    margin: 0 35px 0 15px;
+  }
+
 }
 
 /* lg size*/
@@ -406,6 +447,10 @@ input:focus {
     float: right;
   }
 
+  .ContactIcon {
+    height: 35px;
+    margin: 0 40px 0 20px;
+  }
 }
 
 /* xl size*/
@@ -451,5 +496,10 @@ input:focus {
     width: 50px;
     height: 50px;
     float: right;
+  }
+
+  .ContactIcon {
+    height: 40px;
+    margin: 0 45px 0 25px;
   }
 }
