@@ -8,9 +8,9 @@ export default class Navbar extends Component {
       <div className='StatusBar'>
         <div className='Name'>Jayden Arquelada</div>
         <div className='Icons'>
-          <img className='StatusBarIcon' src={require('./images/wifi.png')}/>
-          <img className='StatusBarIcon' src={require('./images/cellular.png')}/>
-          <img className='StatusBarIcon' src={require('./images/battery.png')}/>
+          <img className='StatusBarIcon' src={require('../images/wifi.png')}/>
+          <img className='StatusBarIcon' src={require('../images/cellular.png')}/>
+          <img className='StatusBarIcon' src={require('../images/battery.png')}/>
           <Clock className='StatusBarIcon TimeIcon' format={'h:mm'} ticking={true} timezone={'Canada/Eastern'} />
         </div>
       </div>

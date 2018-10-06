@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EducationData from './Data/EducationData.json';
+import EducationData from '../Data/EducationData.json';
 
 export default class EducationApp extends Component {
 
@@ -23,7 +23,7 @@ export default class EducationApp extends Component {
           <form onSubmit={this.sendMessage} class="TextMessage">
             <input type='text' placeholder='Message Jayden' ref={e => this.messageRef = e} class='TextMessage'/>
           </form>
-          <img class="SendBtn" src={require('./images/send.png')} onClick={this.sendMessage}/>
+          <img class="SendBtn" src={require('../images/send.png')} onClick={this.sendMessage}/>
         </div>
         <div className='Text InvisText'>Inivisible</div>
         {listItems}
