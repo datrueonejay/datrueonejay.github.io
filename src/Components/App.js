@@ -9,35 +9,9 @@ import Navbar from './Navbar';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-import { Container, Row, Col } from 'reactstrap';
+import mainReducer from '../Redux/Reducers/mainReducer';
 
-const initialState = {
-  display: 'home'
-}
-
-function reducer(state = initialState, action) {
-  switch(action.type) {
-    case 'HOME':
-      return {
-        ...state,
-        display: 'home'
-      }
-    case 'ABOUTME':
-      return {
-        ...state,
-        display: 'aboutMe'
-      }
-    case 'CONTACTME':
-      return {
-        ...state,
-        display: 'contactMe'
-      }
-  }
-
-  return state;
-}
-
-const store = createStore(reducer);
+const store = createStore(mainReducer);
 
 class App extends Component {
   render() {

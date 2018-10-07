@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import EducationApp from './EducationApp';
 import ContactMeApp from './ContactMeApp';
 import { connect } from 'react-redux';
+import { SET_DISPLAY, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
 
 class Screen extends Component {
 
@@ -27,38 +28,37 @@ class Screen extends Component {
   }
 
   showContactMe() {
-    this.props.dispatch({type: 'CONTACTME'})
+    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.CONTACT_ME})
   }
 
   showHome() {
-    this.props.dispatch({type: 'HOME'});
+    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.HOME});
   }
 
   showAboutMe() {
-    this.props.dispatch({type: 'ABOUTME'});
+    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.TEXT_APP});
   }
 
   render() {
     var ret;
       switch (this.props.display) {
-        case 'home':
+        case DISPLAY_TYPE.HOME:
           ret = this.home;
           break;
-        case 'aboutMe':
+        case DISPLAY_TYPE.TEXT_APP:
           ret = this.education;
           break;
-        case 'contactMe':
+        case DISPLAY_TYPE.CONTACT_ME:
           ret = this.contactMe;
           break;
         default:
           ret = this.home;
           break;
       }
-
       return(
         <div className='Screen'>
           {ret}
-          {this.props.display == 'home' &&<Dock contactMe={this.showContactMe}/>}
+          {this.props.display == DISPLAY_TYPE.HOME &&<Dock contactMe={this.showContactMe}/>}
           <Navbar onBack={this.showHome} onHome={this.showHome}/>
         </div>
       );
