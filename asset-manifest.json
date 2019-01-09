@@ -1,20 +1,10 @@
 {
-  "main.css": "static/css/main.5d03b900.css",
-  "main.css.map": "static/css/main.5d03b900.css.map",
-  "main.js": "static/js/main.63bf794e.js",
-  "main.js.map": "static/js/main.63bf794e.js.map",
-  "static\\media\\appDrawer.png": "static/media/appDrawer.51b5c06e.png",
-  "static\\media\\back.png": "static/media/back.fd0baec2.png",
-  "static\\media\\education.png": "static/media/education.01b1dde6.png",
-  "static\\media\\email.png": "static/media/email.30c1a083.png",
-  "static\\media\\experience.png": "static/media/experience.d349dab6.png",
-  "static\\media\\github.png": "static/media/github.2e5942e4.png",
-  "static\\media\\home.png": "static/media/home.85b0d28a.png",
-  "static\\media\\linkedIn.png": "static/media/linkedIn.05bb0733.png",
+  "main.css": "static/css/main.818dd7e5.css",
+  "main.css.map": "static/css/main.818dd7e5.css.map",
+  "main.js": "static/js/main.cbc688c5.js",
+  "main.js.map": "static/js/main.cbc688c5.js.map",
+  "static\\media\\droidBackground.jpg": "static/media/droidBackground.854d1040.jpg",
   "static\\media\\logo.svg": "static/media/logo.ee7cd8ed.svg",
-  "static\\media\\phone.png": "static/media/phone.3396f949.png",
-  "static\\media\\playstore.png": "static/media/playstore.24902441.png",
-  "static\\media\\projects.png": "static/media/projects.ef8cb1ce.png",
-  "static\\media\\recent.png": "static/media/recent.992a1a8a.png",
-  "static\\media\\wifi.png": "static/media/wifi.74701295.png"
+  "static\\media\\resume.pdf": "static/media/resume.3d4b61c0.pdf",
+  "static\\media\\resume.png": "static/media/resume.1b2eef02.png"
 }
