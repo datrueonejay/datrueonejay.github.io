@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import MobileApp from './MobileApp';
 import Dock from './Dock';
 import Navbar from './Navbar';
-import EducationApp from './EducationApp';
+import TextingApp from './TextingApp';
 import ContactMeApp from './ContactMeApp';
+import AboutMeApp from './AboutMeApp';
 import { connect } from 'react-redux';
 import { SET_DISPLAY, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
 
@@ -18,13 +19,14 @@ class Screen extends Component {
     this.home =
       <div className='AppRow'>
         <MobileApp icon={require('../images/aboutMe.png')} name='About Me' onClick={this.showAboutMe}/>
-        <MobileApp icon={require('../images/experience.png')} name='Experience'/>
+        {/* <MobileApp icon={require('../images/experience.png')} name='Experience'/>
         <MobileApp icon={require('../images/projects.png')} name='Projects'/>
-        <MobileApp icon={require('../images/github.png')} name='Hobbies'/>
+        <MobileApp icon={require('../images/github.png')} name='Hobbies'/> */}
       </div>;
 
-    this.education = <EducationApp/>;
+    this.education = <TextingApp/>;
     this.contactMe = <ContactMeApp/>;
+    this.aboutMe = <AboutMeApp/>;
   }
 
   showContactMe() {
@@ -36,7 +38,7 @@ class Screen extends Component {
   }
 
   showAboutMe() {
-    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.TEXT_APP});
+    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.ABOUT_ME});
   }
 
   render() {
@@ -50,6 +52,9 @@ class Screen extends Component {
           break;
         case DISPLAY_TYPE.CONTACT_ME:
           ret = this.contactMe;
+          break;
+        case DISPLAY_TYPE.ABOUT_ME:
+          ret = this.aboutMe;
           break;
         default:
           ret = this.home;

@@ -16,16 +16,10 @@ export default class ContactMeApp extends Component {
         <div className='ContactInfoContainer ContactHalf'>
           <div className='ContactEmail ContactInfo'>
             <img src={require('../images/email.png')} className='ContactIcon'/>
-            datrueonejay@gmail.com<br/>
+            jayden.arquelada@mail.utoronto.ca<br/>
             Email
           </div>
-          <div className='ContactNumber ContactInfo'>
-            <img src={require('../images/phone.png')} className='ContactIcon'/>
-            (647) 268-0248<br/>
-            Mobile
-          </div>
         </div>
-
       </div>
     );
   }

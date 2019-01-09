@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EducationData from '../Data/EducationData.json';
 
-export default class EducationApp extends Component {
+export default class TextingApp extends Component {
 
   constructor(props) {
     super(props);

@@ -15,7 +15,7 @@ body {
 #root {
   height: 100%;
   width: 100%;
-  background: url("https://i.stack.imgur.com/7vMmx.jpg") no-repeat center center fixed;
+  background: url("../images/droidBackground.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -267,6 +267,22 @@ body {
 
 .ContactEmail {
   margin-bottom: 10px;
+}
+
+.AboutMeApp {
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.AboutMePic {
+  float: right;
+  margin-left: 10px;
 }
 
 /* s size*/
