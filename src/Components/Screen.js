@@ -7,7 +7,7 @@ import ContactMeApp from './ContactMeApp';
 import AboutMeApp from './AboutMeApp';
 import { connect } from 'react-redux';
 import { SET_DISPLAY, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
-import CoursesApp from './CoursesApp';
+import ProjectsApp from './ProjectsApp';
 
 class Screen extends Component {
 
@@ -20,7 +20,7 @@ class Screen extends Component {
     this.home =
       <div className='AppRow'>
         <MobileApp icon={require('../images/aboutMe.png')} name='About Me' onClick={this.showAboutMe}/>
-        <MobileApp icon={require('../images/experience.png')} name='Courses' onClick={this.showCourses}/>
+        <MobileApp icon={require('../images/experience.png')} name='Projects' onClick={this.showProjects}/>
         {/* <MobileApp icon={require('../images/experience.png')} name='Experience'/>
         <MobileApp icon={require('../images/projects.png')} name='Projects'/>
         <MobileApp icon={require('../images/github.png')} name='Hobbies'/> */}
@@ -29,23 +29,23 @@ class Screen extends Component {
     this.education = <TextingApp/>;
     this.contactMe = <ContactMeApp/>;
     this.aboutMe = <AboutMeApp/>;
-    this.coursesApp = <CoursesApp/>;
+    this.projectsApp = <ProjectsApp/>;
   }
 
-  showContactMe() {
+  showContactMe = () => {
     this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.CONTACT_ME})
   }
 
-  showHome() {
+  showHome = () => {
     this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.HOME});
   }
 
-  showAboutMe() {
+  showAboutMe = () => {
     this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.ABOUT_ME});
   }
 
-  showCourses =  () => {
-    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.COURSES_APP});
+  showProjects = () => {
+    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.PROJECTS_APP});
   }
 
   render() {
@@ -63,8 +63,8 @@ class Screen extends Component {
         case DISPLAY_TYPE.ABOUT_ME:
           ret = this.aboutMe;
           break;
-        case DISPLAY_TYPE.COURSES_APP:
-          ret = this.coursesApp;
+        case DISPLAY_TYPE.PROJECTS_APP:
+          ret = this.projectsApp;
           break;
         default:
           ret = this.home;
@@ -73,7 +73,7 @@ class Screen extends Component {
       return(
         <div className='Screen'>
           {ret}
-          {this.props.display == DISPLAY_TYPE.HOME &&<Dock contactMe={this.showContactMe}/>}
+          {this.props.display === DISPLAY_TYPE.HOME &&<Dock contactMe={this.showContactMe}/>}
           <Navbar onBack={this.showHome} onHome={this.showHome}/>
         </div>
       );

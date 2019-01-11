@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import DockApp from './DockApp';
 import Resume from '../assets/resume.pdf';
 

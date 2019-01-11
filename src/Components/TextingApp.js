@@ -13,7 +13,7 @@ export default class TextingApp extends Component {
   render() {
 
     var listItems = this.state.messages.map(function(message, index) {
-      return index % 2 == 1 ?  <div className='Text RightText'>{message}</div> : <div className='Text LeftText'>{message}</div>;
+      return index % 2 === 1 ?  <div className='Text RightText'>{message}</div> : <div className='Text LeftText'>{message}</div>;
     }
     );
 
@@ -23,7 +23,7 @@ export default class TextingApp extends Component {
           <form onSubmit={this.sendMessage} class="TextMessage">
             <input type='text' placeholder='Message Jayden' ref={e => this.messageRef = e} class='TextMessage'/>
           </form>
-          <img class="SendBtn" src={require('../images/send.png')} onClick={this.sendMessage}/>
+          <img class="SendBtn" alt="Send Button" src={require('../images/send.png')} onClick={this.sendMessage}/>
         </div>
         <div className='Text InvisText'>Inivisible</div>
         {listItems}

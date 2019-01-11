@@ -4,16 +4,11 @@ import { connect } from 'react-redux';
 
 
 class AboutMeApp extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         if (this.props.aboutMeAppOpen) {
             return (
                 <div className='AboutMeApp'>
-                    <div>Hey, I'm Jayden Arquelada.{' '}<img className='AboutMePic'src={require('../images/aboutMe.png')}/>
+                    <div>Hey, I'm Jayden Arquelada.{' '}<img className='AboutMePic' alt='Jayden' src={require('../images/aboutMe.png')}/>
                     I am a third year computer science student, specializing in software engineering at UofT.{' '}
                     I love learning new things, and have a keen interest in mobile development.{' '}
                     I also love listening to and playing music, hanging out with friends, and gaming.{' '}
@@ -29,7 +24,7 @@ class AboutMeApp extends Component {
     
                     <Typing speed={10}>
                     <div>Hey, I'm Jayden Arquelada.{' '}
-                    <img className='AboutMePic'src={require('../images/aboutMe.png')}/>
+                    <img className='AboutMePic' alt='Jayden' src={require('../images/aboutMe.png')}/>
                     <Typing.Delay ms={1000} />
                     I am a third year computer science student, specializing in software engineering at UofT.{' '}
                     <Typing.Delay ms={1000} />
