@@ -7,6 +7,7 @@ import ContactMeApp from './ContactMeApp';
 import AboutMeApp from './AboutMeApp';
 import { connect } from 'react-redux';
 import { SET_DISPLAY, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
+import CoursesApp from './CoursesApp';
 
 class Screen extends Component {
 
@@ -19,6 +20,7 @@ class Screen extends Component {
     this.home =
       <div className='AppRow'>
         <MobileApp icon={require('../images/aboutMe.png')} name='About Me' onClick={this.showAboutMe}/>
+        <MobileApp icon={require('../images/experience.png')} name='Courses' onClick={this.showCourses}/>
         {/* <MobileApp icon={require('../images/experience.png')} name='Experience'/>
         <MobileApp icon={require('../images/projects.png')} name='Projects'/>
         <MobileApp icon={require('../images/github.png')} name='Hobbies'/> */}
@@ -27,6 +29,7 @@ class Screen extends Component {
     this.education = <TextingApp/>;
     this.contactMe = <ContactMeApp/>;
     this.aboutMe = <AboutMeApp/>;
+    this.coursesApp = <CoursesApp/>;
   }
 
   showContactMe() {
@@ -39,6 +42,10 @@ class Screen extends Component {
 
   showAboutMe() {
     this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.ABOUT_ME});
+  }
+
+  showCourses =  () => {
+    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.COURSES_APP});
   }
 
   render() {
@@ -55,6 +62,9 @@ class Screen extends Component {
           break;
         case DISPLAY_TYPE.ABOUT_ME:
           ret = this.aboutMe;
+          break;
+        case DISPLAY_TYPE.COURSES_APP:
+          ret = this.coursesApp;
           break;
         default:
           ret = this.home;

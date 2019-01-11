@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Button } from '@material-ui/core';
 
 
 
@@ -8,9 +9,12 @@ export default class Navbar extends Component {
     return(
       <Container fluid className='Navbar'>
         <Row className='Navbar'>
-        <Col xs='4' className='NavBarItem' onClick={this.props.onBack}>
-          <img className='NavBarButton' id='Back' src={require('../images/back.png')}/>
-        </Col>
+        <Button size='small' className='test'>
+          <Col xs='4' className='NavBarItem' onClick={this.props.onBack}>
+            <img className='NavBarButton' id='Back' src={require('../images/back.png')}/>
+          </Col>
+        </Button>
+
         <Col xs='4' className='NavBarItem' onClick={this.props.onHome}>
           <img className='NavBarButton' id='Home' src={require('../images/home.png')}/>
         </Col>

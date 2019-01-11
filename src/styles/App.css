@@ -285,6 +285,15 @@ body {
   margin-left: 10px;
 }
 
+.CourseCard {
+  margin: 5% 3%;
+
+}
+
+.test {
+  background-color: blue;
+}
+
 /* s size*/
 @media (min-width: 576px) {
   #root {
