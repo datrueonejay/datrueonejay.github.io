@@ -20,7 +20,7 @@ class Screen extends Component {
     this.home =
       <div className='AppRow'>
         <MobileApp icon={require('../images/aboutMe.png')} name='About Me' onClick={this.showAboutMe}/>
-        <MobileApp icon={require('../images/experience.png')} name='Projects' onClick={this.showProjects}/>
+        <MobileApp icon={require('../images/projects.png')} name='Projects' onClick={this.showProjects}/>
         {/* <MobileApp icon={require('../images/experience.png')} name='Experience'/>
         <MobileApp icon={require('../images/projects.png')} name='Projects'/>
         <MobileApp icon={require('../images/github.png')} name='Hobbies'/> */}

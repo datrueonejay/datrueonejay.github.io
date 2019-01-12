@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
-import { CardContent } from '@material-ui/core';
+import { CardContent, Button } from '@material-ui/core';
 
 class ProjectCard extends Component {
     render() {
-        var listItems = this.props.points ? this.props.points.map(function(message, index) {
-            return <li>{message}</li>
+        var listItems = this.props.buttons ? this.props.buttons.map(function(info, index) {
+            return <div><Button href={info.link} target='_blank' className='ProjectBtn'>{info.text}</Button></div>
         }) : null;
+        console.log(this.props.buttons)
         return (    
-            <Card className="CourseCard">
+            <Card className="ProjectCard">
                 <CardContent>
-                    {this.props.title}
-                    <ul>
-                        {listItems}
-                    </ul>
+                    <div className='ProjectTitle'>{this.props.title}</div>
+                    <div className='ProjectCardContent'>
+                        <div className='ProjectCardBody'>
+                            <div>
+                                {/* <div className='ProjectDescription'>Description: </div> */}
+                                {this.props.description}
+                            </div>
+                            <div>
+                                {/* <h5>Technologies and Tools: </h5> */}
+                                Built using {this.props.tech}.
+                            </div>
+                            {listItems}
+
+                        </div>
+                        <img alt='projectIcon' className='ProjectIcon' src={this.props.icon}/>
+                    </div>
+
+                    
                 </CardContent>
             </Card>    
         );

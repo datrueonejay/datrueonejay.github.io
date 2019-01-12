@@ -285,14 +285,48 @@ body {
   margin-left: 10px;
 }
 
-.CourseCard {
-  margin: 5% 3%;
+.ProjectCard {
+  margin: 3% 3%;
+  border-radius: 25px !important;
+}
+
+.ProjectsApp {
+  background-color: #eeeeee;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
 
 }
 
 .whiteRipple {
   color: rgb(255, 255, 255) !important;
   border-radius: 100px !important;
+}
+
+.ProjectCardContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ProjectCardBody {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+}
+
+.ProjectIcon {
+  height: 60px;
+  width: 60px;
+}
+
+.ProjectTitle {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.ProjectBtn {
+  padding: 0 !important;
 }
 
 /* s size*/
@@ -347,6 +381,11 @@ body {
     margin: 0 30px 0 10px;
   }
 
+  .ProjectIcon {
+    height: 80px;
+    width: 80px;
+  }
+
 }
 
 /* m size*/
@@ -385,7 +424,7 @@ body {
   .AppRow {
     padding-right: 120px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .AppIconAnchor {
@@ -429,6 +468,10 @@ body {
     margin: 0 35px 0 15px;
   }
 
+  .ProjectIcon {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 /* lg size*/
@@ -479,6 +522,11 @@ body {
   .ContactIcon {
     height: 35px;
     margin: 0 40px 0 20px;
+  }
+
+  .ProjectIcon {
+    height: 120px;
+    width: 120px;
   }
 }
 
