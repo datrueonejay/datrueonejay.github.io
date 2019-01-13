@@ -48,7 +48,7 @@ const workbenchvid = {
 class ProjectsApp extends Component {
     render() {
         return (    
-            <div className='ProjectsApp'>
+            <div className='ProjectsApp MobileApp' onClick={this.props.onClick}>
                 {/* <h1>Projects</h1> */}
                 <ProjectCard title="Dinder Mobile Application" icon={require('../images/dinder.png')}
                     description={dinderDescription} tech='React Native, Node.js, Redux, Zomato API'

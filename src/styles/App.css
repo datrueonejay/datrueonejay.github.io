@@ -20,11 +20,11 @@ body {
 }
 
 .FillWidth {
-  width: 100%;
+  width: 100% !important;
 }
 
 .FillHeight {
-  height: 100%;
+  height: 100% !important;
 }
 
 .StatusBar {
@@ -274,8 +274,6 @@ body {
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
-  height: 100%;
-  width: 100%;
   padding: 20px;
   padding-top: 50px;
 }
@@ -292,10 +290,17 @@ body {
 
 .ProjectsApp {
   background-color: #eeeeee;
-  height: 100%;
-  overflow-y: auto;
-  width: 100%;
+}
 
+.MobileApp {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.Test {
+  background-color: green;
+  overflow: scroll;
 }
 
 .whiteRipple {
@@ -327,6 +332,57 @@ body {
 
 .ProjectBtn {
   padding: 0 !important;
+}
+
+.InterestsApp {
+  background-color: red;
+}
+
+.RecentsScreen {
+  display: flex;
+  overflow-x: auto;
+  height: 100%;
+  z-index: 9999999999;
+}
+
+.RecentsApp {
+  margin: 0 auto;
+  min-width: 350px;
+  max-width: 350px;
+  height: 600px;
+  transform: scale(0.8, 0.8);
+}
+
+.RecentsAppHeader {
+  height: 50px;
+  width: 100%;
+  background-color: #FFFFFF;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5em;
+  padding: 3px 5px;
+}
+
+.RecentsIcon {
+  max-width: 90%;
+  max-height: 90%;
+  margin-right: 10px;
+}
+
+.NoRecents {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.CloseRecentApp {
+  float: right !important;
+
 }
 
 /* s size*/
@@ -386,6 +442,16 @@ body {
     width: 80px;
   }
 
+  /* .RecentsScreen {
+    margin-top: 60px;
+    margin-bottom: 85px;
+  } */
+
+  .RecentsApp {
+    min-width: 450px;
+    max-width: 450px;
+    height: 700px;
+  }
 }
 
 /* m size*/
@@ -472,6 +538,15 @@ body {
     height: 100px;
     width: 100px;
   }
+
+  .RecentsApp {
+    min-width: 550px;
+    max-width: 550px;
+  }
+  /* .RecentsScreen {
+    margin-top: 61px;
+    margin-bottom: 90px;
+  } */
 }
 
 /* lg size*/
@@ -528,6 +603,16 @@ body {
     height: 120px;
     width: 120px;
   }
+
+  .RecentsApp {
+    min-width: 650px;
+    max-width: 650px;
+  }
+
+  /* .RecentsScreen {
+    margin-top: 62px;
+    margin-bottom: 95px;
+  } */
 }
 
 /* xl size*/
@@ -579,4 +664,14 @@ body {
     height: 40px;
     margin: 0 45px 0 25px;
   }
+
+  .RecentsApp {
+    min-width: 750px;
+    max-width: 750px;
+  }
+
+  /* .RecentsScreen {
+    margin-top: 63px;
+    margin-bottom: 100px;
+  } */
 }

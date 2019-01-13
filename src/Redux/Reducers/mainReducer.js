@@ -1,8 +1,55 @@
-import { combineReducers } from 'redux';
-import { display } from './displayReducer';
+import { SET_DISPLAY, DISPLAY_TYPE, OPEN_ABOUT_ME, CLOSE_APP } from '../Actions/actionConstants';
 
-const mainReducer = combineReducers({
-  display
-})
+const defaultState = {
+    display: DISPLAY_TYPE.HOME,
+    openApps: [],
+    aboutMeAppOpen: false
+}
 
-export default mainReducer
+export default function reducer(state = defaultState, action) {
+  console.log(state)
+  switch(action.type) {
+    case SET_DISPLAY:
+      // Put app in recents app if display is not home
+      if (action.display != DISPLAY_TYPE.HOME && action.display != DISPLAY_TYPE.RECENTS) {
+        var copy = state.openApps;
+        var index = copy.indexOf(action.display);
+        if (index != -1) {
+          copy.splice(index, 1);
+        }
+        copy.unshift(action.display)
+        return {
+          ...state,
+          openApps: copy,
+          display: action.display
+        }
+      }
+      // Otherwise just change display type
+      return {
+        ...state,
+        display: action.display
+      }
+    case OPEN_ABOUT_ME:
+      return {
+        ...state,
+        aboutMeAppOpen: true
+      }
+    case CLOSE_APP:
+      var copy = state.openApps;
+      var index = copy.indexOf(action.display);
+      if (index != -1) {
+        copy.splice(index, 1);
+      }
+      var aboutMeAppOpen = true;
+      if (action.display === DISPLAY_TYPE.ABOUT_ME) {
+        aboutMeAppOpen = false;
+      }
+      return {
+        ...state,
+        openApps: copy,
+        aboutMeAppOpen: aboutMeAppOpen
+      }
+    default:
+      return state
+  }
+}

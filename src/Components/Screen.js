@@ -1,82 +1,66 @@
 import React, { Component } from 'react';
-import MobileApp from './MobileApp';
-import Dock from './Dock';
 import Navbar from './Navbar';
 import TextingApp from './TextingApp';
 import ContactMeApp from './ContactMeApp';
 import AboutMeApp from './AboutMeApp';
 import { connect } from 'react-redux';
-import { SET_DISPLAY, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
+import { dispatchHome, dispatchRecents, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
 import ProjectsApp from './ProjectsApp';
+import InterestsApp from './InterestsApp';
+import { Zoom } from 'react-reveal';
+import HomeScreen from './HomeScreen';
+import RecentsScreen from './RecentsScreen';
 
 class Screen extends Component {
-
-  constructor(props) {
-    super(props);
-    this.showAboutMe = this.showAboutMe.bind(this);
-    this.showHome = this.showHome.bind(this);
-    this.showContactMe = this.showContactMe.bind(this);
-
-    this.home =
-      <div className='AppRow'>
-        <MobileApp icon={require('../images/aboutMe.png')} name='About Me' onClick={this.showAboutMe}/>
-        <MobileApp icon={require('../images/projects.png')} name='Projects' onClick={this.showProjects}/>
-        {/* <MobileApp icon={require('../images/experience.png')} name='Experience'/>
-        <MobileApp icon={require('../images/projects.png')} name='Projects'/>
-        <MobileApp icon={require('../images/github.png')} name='Hobbies'/> */}
-      </div>;
-
-    this.education = <TextingApp/>;
-    this.contactMe = <ContactMeApp/>;
-    this.aboutMe = <AboutMeApp/>;
-    this.projectsApp = <ProjectsApp/>;
-  }
-
-  showContactMe = () => {
-    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.CONTACT_ME})
-  }
-
   showHome = () => {
-    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.HOME});
+    this.props.dispatch(dispatchHome());
   }
 
-  showAboutMe = () => {
-    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.ABOUT_ME});
-  }
-
-  showProjects = () => {
-    this.props.dispatch({type: SET_DISPLAY, displayType: DISPLAY_TYPE.PROJECTS_APP});
+  showRecents = () => {
+    this.props.dispatch(dispatchRecents());
   }
 
   render() {
     var ret;
       switch (this.props.display) {
         case DISPLAY_TYPE.HOME:
-          ret = this.home;
+          ret = <HomeScreen/>;
           break;
         case DISPLAY_TYPE.TEXT_APP:
-          ret = this.education;
+          ret = <TextingApp/>;
           break;
         case DISPLAY_TYPE.CONTACT_ME:
-          ret = this.contactMe;
+          ret = <ContactMeApp/>;
           break;
         case DISPLAY_TYPE.ABOUT_ME:
-          ret = this.aboutMe;
+          ret = <AboutMeApp/>;
           break;
         case DISPLAY_TYPE.PROJECTS_APP:
-          ret = this.projectsApp;
+          ret = <ProjectsApp/>;
+          break;
+        case DISPLAY_TYPE.INTERESTS_APP:
+          ret = <InterestsApp/>;
+          break;
+        case DISPLAY_TYPE.RECENTS:
+          ret = <RecentsScreen/>;
           break;
         default:
-          ret = this.home;
+          ret = <HomeScreen/>;
           break;
       }
-      return(
-        <div className='Screen'>
+    if (this.props.display != DISPLAY_TYPE.HOME && this.props.display != DISPLAY_TYPE.RECENTS) {
+      ret = <Zoom duration={250}>
+        <div className='FillHeight'>
           {ret}
-          {this.props.display === DISPLAY_TYPE.HOME &&<Dock contactMe={this.showContactMe}/>}
-          <Navbar onBack={this.showHome} onHome={this.showHome}/>
         </div>
-      );
+      </Zoom>
+    } 
+    return(
+      <div className='Screen'>
+        {ret}
+        <Navbar onBack={this.showHome} onHome={this.showHome} onRecents={this.showRecents}/>
+      </div>
+    );
   }
 }
 
