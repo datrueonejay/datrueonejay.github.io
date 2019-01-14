@@ -151,6 +151,10 @@ body {
   display: block;
 }
 
+.IosBarButton {
+  margin: 0 auto;
+}
+
 #Back {
   float: right;
   margin: 0 20% 0 80%;

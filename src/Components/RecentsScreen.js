@@ -53,18 +53,28 @@ class RecentsScreen extends Component {
         switch (app) {
             case DISPLAY_TYPE.ABOUT_ME:
                 ret = <div className='FillHeight'>
-                    <RecentAppHeader icon={require('../images/aboutMe.png')} name='About Me' onClose={meClose}/>
+                    <RecentAppHeader icon={require('../images/aboutMe.png')} 
+                        name='About Me' 
+                        onClose={meClose}
+                        color='#FF7E2D'/>
                     <AboutMeApp className='' onClick={me}/>
                     </div>;
                 break;
             case DISPLAY_TYPE.PROJECTS_APP:
                 ret = <div className='FillHeight'>
-                    <RecentAppHeader icon={require('../images/projects.png')} name='Projects' onClose={projClose}/>
+                    <RecentAppHeader icon={require('../images/projects.png')} 
+                        name='Projects' 
+                        onClose={projClose}
+                        color='#4BAAF4'/>
                     <ProjectsApp className='' onClick={proj}/></div>;
                 break;
             case DISPLAY_TYPE.INTERESTS_APP:
                 ret = <div className='FillHeight'>
-                    <RecentAppHeader icon={require('../images/experience.png')} name='Interests' onClose={intClose}/>
+                    <RecentAppHeader icon={require('../images/experience.png')} 
+                        name='Interests' 
+                        onClose={intClose}
+                        color='#000000'
+                        textColor='#FFFFFF'/>
                     <InterestsApp className='' onClick={int}/>
                 </div>;
                 break;
@@ -74,11 +84,9 @@ class RecentsScreen extends Component {
             }
         return <div className='RecentsApp'>{ret}</div>;
         });
-        console.log(listItems)
         if (listItems.length === 0) {
             listItems = [<div className='NoRecents'>NO RECENT APPS!</div>]
         }
-        console.log(listItems);
         return(
             <Zoom duration={500} className='FillHeight'>
             <div className='RecentsScreen'>

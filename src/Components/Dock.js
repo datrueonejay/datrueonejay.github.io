@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 import DockApp from './DockApp';
 import Resume from '../assets/resume.pdf';
+import { OS } from '../Redux/Actions/actionConstants';
+import { connect } from 'react-redux';
 
-
-
-export default class Dock extends Component {
+class Dock extends Component {
   render() {
     return(
       <div className='Dock' >
-        <DockApp icon={require('../images/github.png')} link='https://github.com/datrueonejay'/>
-        <DockApp icon={require('../images/linkedIn.png')} link='https://www.linkedin.com/in/jayden-arquelada-b70186111/'/>
-        <DockApp icon={require('../images/resume.png')} link={Resume}/>
-        <DockApp icon={require('../images/contact.png')}  link="mailto:jayden.arquelada@mail.utoronto.ca" target='_top'/>
+        <DockApp icon={this.props.os === OS.DROID ? 
+          require('../images/github.png') :
+          require('../images/githubIOS.png')} link='https://github.com/datrueonejay'/>
+        <DockApp icon={this.props.os === OS.DROID ? 
+          require('../images/linkedIn.png') :
+          require('../images/linkedInIOS.png')} link='https://www.linkedin.com/in/jayden-arquelada-b70186111/'/>
+        <DockApp icon={this.props.os === OS.DROID ? 
+          require('../images/resume.png') :
+          require('../images/resumeIOS.png')} link={Resume}/>
+        <DockApp icon={this.props.os === OS.DROID ? 
+          require('../images/contact.png') :
+          require('../images/contactIOS.png')}  link="mailto:jayden.arquelada@mail.utoronto.ca" target='_top'/>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    os: state.os,
+  }
+}
+
+export default connect(mapStateToProps)(Dock);

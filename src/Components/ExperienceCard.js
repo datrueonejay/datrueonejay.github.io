@@ -19,11 +19,9 @@ class ProjectCard extends Component {
     }
 
     render() {
-        console.log(this.props.points)
         var listItems = this.props.points ? this.props.points.map(function(info, index) {
             return <li className='ExperiencePoint'>{info}</li>
         }) : null;
-        console.log(listItems)
         var icon = listItems === null ? null :
             <IconButton
                 onClick={this.expandCard}

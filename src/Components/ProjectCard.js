@@ -8,7 +8,6 @@ class ProjectCard extends Component {
         var listItems = this.props.buttons ? this.props.buttons.map(function(info, index) {
             return <div><Button href={info.link} target='_blank' className='ProjectBtn'>{info.text}</Button></div>
         }) : null;
-        console.log(this.props.buttons)
         return (    
             <Card className="ProjectCard">
                 <CardContent>

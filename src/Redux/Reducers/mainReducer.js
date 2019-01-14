@@ -1,13 +1,13 @@
-import { SET_DISPLAY, DISPLAY_TYPE, OPEN_ABOUT_ME, CLOSE_APP } from '../Actions/actionConstants';
+import { SET_DISPLAY, DISPLAY_TYPE, OPEN_ABOUT_ME, CLOSE_APP, SET_OS, OS } from '../Actions/actionConstants';
 
 const defaultState = {
     display: DISPLAY_TYPE.HOME,
     openApps: [],
-    aboutMeAppOpen: false
+    aboutMeAppOpen: false,
+    os: OS.DROID,
 }
 
 export default function reducer(state = defaultState, action) {
-  console.log(state)
   switch(action.type) {
     case SET_DISPLAY:
       // Put app in recents app if display is not home
@@ -48,6 +48,11 @@ export default function reducer(state = defaultState, action) {
         ...state,
         openApps: copy,
         aboutMeAppOpen: aboutMeAppOpen
+      }
+    case SET_OS:
+      return {
+        ...state,
+        os: action.os
       }
     default:
       return state

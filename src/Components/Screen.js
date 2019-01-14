@@ -4,12 +4,13 @@ import TextingApp from './TextingApp';
 import ContactMeApp from './ContactMeApp';
 import AboutMeApp from './AboutMeApp';
 import { connect } from 'react-redux';
-import { dispatchHome, dispatchRecents, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
+import { dispatchHome, dispatchRecents, DISPLAY_TYPE, OS } from '../Redux/Actions/actionConstants';
 import ProjectsApp from './ProjectsApp';
 import ExperienceApp from './ExperienceApp';
 import { Zoom } from 'react-reveal';
 import HomeScreen from './HomeScreen';
 import RecentsScreen from './RecentsScreen';
+import IosBottomBar from './IosBottomBar';
 
 class Screen extends Component {
   showHome = () => {
@@ -55,18 +56,24 @@ class Screen extends Component {
         </div>
       </Zoom>
     } 
+    var bar = this.props.os === OS.DROID ? 
+      <Navbar onBack={this.showHome} onHome={this.showHome} onRecents={this.showRecents}/> :
+      <IosBottomBar onSingleClick={this.showHome} onDoubleClick={this.showRecents}/>;
+
     return(
       <div className='Screen'>
         {ret}
-        <Navbar onBack={this.showHome} onHome={this.showHome} onRecents={this.showRecents}/>
+        {bar}
       </div>
     );
   }
 }
 
+
 function mapStateToProps(state) {
   return {
-    display: state.display
+    display: state.display,
+    os: state.os,
   };
 }
 

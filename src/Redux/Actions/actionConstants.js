@@ -4,6 +4,7 @@ Action types
 export const SET_DISPLAY = 'SET_DISPLAY';
 export const OPEN_ABOUT_ME = 'OPEN_ABOUT_ME';
 export const CLOSE_APP = 'CLOSE_APP';
+export const SET_OS = 'SET_OS';
 
 /*
 Other Constants
@@ -20,7 +21,10 @@ export const DISPLAY_TYPE = {
 const APP_NAME = {
   ABOUT_ME: "ABOUT_ME",
   PROJECTS: "PROJECTS",
-
+}
+export const OS = {
+  DROID: 'DROID',
+  IOS: 'IOS',
 }
 
 /*
@@ -92,5 +96,19 @@ export function dispatchCloseTexting() {
   return {
     type: CLOSE_APP,
     display: DISPLAY_TYPE.TEXT_APP
+  }
+}
+
+export function dispatchSetDroid() {
+  return {
+    type: SET_OS,
+    os: OS.DROID
+  }
+}
+
+export function dispatchSetiOS() {
+  return {
+    type: SET_OS,
+    os: OS.IOS
   }
 }
