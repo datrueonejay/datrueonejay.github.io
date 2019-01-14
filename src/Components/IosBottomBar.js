@@ -28,7 +28,7 @@ export default class IosBottomBar extends Component {
                             }
                         })
 
-                    }, 100
+                    }, 200
                 );
                 return (
                     {
@@ -49,8 +49,9 @@ export default class IosBottomBar extends Component {
 
     render() {
         return(
-        <div className='Navbar'>
-            <img className='NavBarButton IosBarButton' onClick={this.click} src={require('../images/iosHome.png')}/>
+        <div className='Navbar IosBar'>
+        <img className='IosBarButton' onClick={this.click} src={require('../images/iosHome.png')}/>
+
         </div>
         );
     }
