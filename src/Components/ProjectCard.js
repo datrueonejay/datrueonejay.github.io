@@ -16,11 +16,9 @@ class ProjectCard extends Component {
                     <div className='ProjectCardContent'>
                         <div className='ProjectCardBody'>
                             <div>
-                                {/* <div className='ProjectDescription'>Description: </div> */}
                                 {this.props.description}
                             </div>
                             <div>
-                                {/* <h5>Technologies and Tools: </h5> */}
                                 Built using {this.props.tech}.
                             </div>
                             {listItems}

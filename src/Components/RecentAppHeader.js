@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Close from '@material-ui/icons/Close';
 
 class RecentAppHeader extends Component {
     render() {
@@ -8,7 +9,7 @@ class RecentAppHeader extends Component {
                 <img src={this.props.icon} alt='icon' className='RecentsIcon'/>
                 <span className='RecentsName'>{this.props.name}</span>
                 <div className='CloseRecentApp' onClick={this.props.onClose}>
-                    X
+                    <Close/>
                 </div>
             </div>
         );

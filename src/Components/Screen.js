@@ -6,7 +6,7 @@ import AboutMeApp from './AboutMeApp';
 import { connect } from 'react-redux';
 import { dispatchHome, dispatchRecents, DISPLAY_TYPE } from '../Redux/Actions/actionConstants';
 import ProjectsApp from './ProjectsApp';
-import InterestsApp from './InterestsApp';
+import ExperienceApp from './ExperienceApp';
 import { Zoom } from 'react-reveal';
 import HomeScreen from './HomeScreen';
 import RecentsScreen from './RecentsScreen';
@@ -39,7 +39,7 @@ class Screen extends Component {
           ret = <ProjectsApp/>;
           break;
         case DISPLAY_TYPE.INTERESTS_APP:
-          ret = <InterestsApp/>;
+          ret = <ExperienceApp/>;
           break;
         case DISPLAY_TYPE.RECENTS:
           ret = <RecentsScreen/>;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ProjectCard from './ProjectCard';
-import { Button } from '@material-ui/core';
 
 const dinderDescription = 'A mobile application, used to find food places around you, based on categories you select.';
 const dinderFront = {
@@ -65,8 +64,6 @@ class ProjectsApp extends Component {
                 <ProjectCard title="Sequence Android Application" icon={require('../images/sequence.png')}
                     description={sequenceDescription} tech='Java'
                     buttons={[sequence, sequencePlayStore]}/>  
-
-
             </div>
             
         );

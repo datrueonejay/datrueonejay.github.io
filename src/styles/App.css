@@ -334,8 +334,12 @@ body {
   padding: 0 !important;
 }
 
-.InterestsApp {
-  background-color: red;
+.ExperienceApp {
+  background-color: black;
+}
+
+.ExperienceCard {
+  border-radius: 0px !important;
 }
 
 .RecentsScreen {
@@ -349,7 +353,8 @@ body {
   margin: 0 auto;
   min-width: 350px;
   max-width: 350px;
-  height: 600px;
+  height: 100%;
+  padding-bottom: 20px;
   transform: scale(0.8, 0.8);
 }
 
@@ -383,6 +388,20 @@ body {
 .CloseRecentApp {
   float: right !important;
 
+}
+
+.ExapndBtn {
+  float: right !important;
+}
+
+.ExperiencePoints {
+  font-size: 0.8em;
+  margin-left: 1.5em;
+  padding: 1em;
+
+}
+
+.ExperiencePoint {
 }
 
 /* s size*/
@@ -450,7 +469,6 @@ body {
   .RecentsApp {
     min-width: 450px;
     max-width: 450px;
-    height: 700px;
   }
 }
 

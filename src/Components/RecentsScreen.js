@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { DISPLAY_TYPE, dispatchAboutMe, dispatchProjects, dispatchInterests, dispatchCloseAboutMe, dispatchCloseProjects, dispatchCloseInterests } from '../Redux/Actions/actionConstants';
 import ProjectsApp from './ProjectsApp';
-import InterestsApp from './InterestsApp';
+import InterestsApp from './ExperienceApp';
 import HomeScreen from './HomeScreen';
 import AboutMeApp from './AboutMeApp';
 import { Zoom } from 'react-reveal';

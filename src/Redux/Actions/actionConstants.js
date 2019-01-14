@@ -50,6 +50,12 @@ export function dispatchInterests() {
     display: DISPLAY_TYPE.INTERESTS_APP
   }
 }
+export function dispatchTexting() {
+  return {
+    type: SET_DISPLAY,
+    display: DISPLAY_TYPE.TEXT_APP
+  }
+}
 export function dispatchRecents() {
   return {
     type: SET_DISPLAY,
@@ -80,5 +86,11 @@ export function dispatchCloseInterests() {
   return {
     type: CLOSE_APP,
     display: DISPLAY_TYPE.INTERESTS_APP
+  }
+}
+export function dispatchCloseTexting() {
+  return {
+    type: CLOSE_APP,
+    display: DISPLAY_TYPE.TEXT_APP
   }
 }

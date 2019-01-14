@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MobileApp from './MobileApp';
-import { SET_DISPLAY, DISPLAY_TYPE, dispatchAboutMe, dispatchProjects, dispatchInterests } from '../Redux/Actions/actionConstants';
+import { SET_DISPLAY, DISPLAY_TYPE, dispatchAboutMe, dispatchProjects, dispatchInterests, dispatchTexting } from '../Redux/Actions/actionConstants';
 import Dock from './Dock';
 
 class HomeScreen extends Component {
@@ -14,8 +14,12 @@ class HomeScreen extends Component {
         this.props.dispatch(dispatchProjects());
     }
     
-    showInterests = () => {
+    showExperience = () => {
         this.props.dispatch(dispatchInterests());
+    }
+
+    showTexting = () => {
+        this.props.dispatch(dispatchTexting());
     }
 
     render() {
@@ -24,7 +28,7 @@ class HomeScreen extends Component {
                 <div className='AppRow'>
                     <MobileApp icon={require('../images/aboutMe.png')} name='About Me' onClick={this.showAboutMe}/>
                     <MobileApp icon={require('../images/projects.png')} name='Projects' onClick={this.showProjects}/>
-                    <MobileApp icon={require('../images/experience.png')} name='Interests' onClick={this.showInterests}/>
+                    <MobileApp icon={require('../images/experience.png')} name='Experience' onClick={this.showExperience}/>
                 </div>
                 <Dock contactMe={this.showContactMe}/>
             </div>
