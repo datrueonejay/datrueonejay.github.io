@@ -80,7 +80,7 @@ body {
   position: fixed;
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   bottom: 0;
   padding-bottom: 60px;
 }
@@ -115,7 +115,7 @@ body {
   margin: 20px 0;
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .AppIconAnchor {
@@ -145,7 +145,7 @@ body {
   position: fixed;
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   bottom: 0;
   padding-bottom: 60px;
 }
