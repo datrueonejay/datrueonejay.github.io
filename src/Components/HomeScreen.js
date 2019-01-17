@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MobileApp from './MobileApp';
-import { SET_DISPLAY, DISPLAY_TYPE, dispatchAboutMe, dispatchProjects, dispatchInterests, dispatchTexting, OS, dispatchSetDroid, dispatchSetiOS } from '../Redux/Actions/actionConstants';
+import { dispatchAboutMe, dispatchProjects, dispatchInterests, dispatchTexting, OS, dispatchSetDroid, dispatchSetiOS, dispatchCredits } from '../Redux/Actions/actionConstants';
 import Dock from './Dock';
 
 class HomeScreen extends Component {
@@ -22,6 +22,10 @@ class HomeScreen extends Component {
         this.props.dispatch(dispatchTexting());
     }
 
+    showCredits = () => {
+        this.props.dispatch(dispatchCredits());
+    }
+
     switchOs = () => {
         this.props.dispatch(this.props.os === OS.DROID ?  dispatchSetiOS() : dispatchSetDroid());
     }
@@ -32,7 +36,7 @@ class HomeScreen extends Component {
                 <div className='AppRow'>
                     <MobileApp icon={ this.props.os === OS.DROID ? 
                     require('../images/aboutMe.png') :
-                    require('../images/aboutMeIOS.png')} name='About Me' onClick={this.showAboutMe}/>
+                    require('../images/aboutMeIOS.png')} name='Who Am I' onClick={this.showAboutMe}/>
                     <MobileApp icon={ this.props.os === OS.DROID ? 
                         require('../images/projects.png') :
                         require('../images/projectsIOS.png')} name='Projects' onClick={this.showProjects}/>
@@ -41,6 +45,8 @@ class HomeScreen extends Component {
                         require('../images/experienceIOS.png')} name='Experience' onClick={this.showExperience}/>
                     <MobileApp icon={this.props.os === OS.DROID ? require('../images/iOS.png') : require('../images/droid.png')} 
                         name={this.props.os === OS.DROID ? 'iOS' : 'Android'} onClick={this.switchOs}/>
+                    <MobileApp icon={this.props.os === OS.DROID ? require('../images/copyright.png') : require('../images/copyrightIOS.png')} 
+                        name='Credits' onClick={this.showCredits}/>
                 </div>
                 <Dock contactMe={this.showContactMe}/>
             </div>

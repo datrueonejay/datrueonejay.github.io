@@ -27,7 +27,7 @@ body {
   height: 100% !important;
 }
 
-.StatusBar {
+.StatusBar, .IosStatusBar {
   top: 0;
   position: fixed;
   width: 100%;
@@ -47,6 +47,12 @@ body {
   display: inline;
 }
 
+.IosStatusBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
 .StatusBarIcon {
   height: 15px;
   width: 15px;
@@ -55,6 +61,19 @@ body {
 
 .TimeIcon {
   margin: 0 5px;
+}
+
+.IosTimeIcon {
+  text-align: center;
+  width: 100% !important;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.IosBattery {
+  margin-left: auto;
 }
 
 .Dock {
@@ -287,7 +306,7 @@ body {
 }
 
 .AboutMeApp {
-  background-color: #000000;
+  background-color: #005b96;
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
@@ -376,19 +395,23 @@ body {
 }
 
 .RecentsAppHeader {
+  display: flex;
   height: 50px;
   width: 100%;
-  background-color: #FFFFFF;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.5em;
-  padding: 3px 5px;
+  padding: 0px 10px;
 }
 
 .RecentsIcon {
   max-width: 90%;
   max-height: 90%;
   margin-right: 10px;
+}
+
+.RecentsName {
+  flex-grow: 1;
 }
 
 .NoRecents {
@@ -402,9 +425,9 @@ body {
   padding: 50px;
 }
 
-.CloseRecentApp {
-  float: right !important;
-
+.CreditsApp {
+  background-color: #FFFFFF;
+  padding: 10px;
 }
 
 .ExapndBtn {

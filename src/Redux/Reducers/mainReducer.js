@@ -11,10 +11,10 @@ export default function reducer(state = defaultState, action) {
   switch(action.type) {
     case SET_DISPLAY:
       // Put app in recents app if display is not home
-      if (action.display != DISPLAY_TYPE.HOME && action.display != DISPLAY_TYPE.RECENTS) {
-        var copy = state.openApps;
-        var index = copy.indexOf(action.display);
-        if (index != -1) {
+      if (action.display !== DISPLAY_TYPE.HOME && action.display !== DISPLAY_TYPE.RECENTS) {
+        let copy = state.openApps;
+        let index = copy.indexOf(action.display);
+        if (index !== -1) {
           copy.splice(index, 1);
         }
         copy.unshift(action.display)
@@ -35,12 +35,12 @@ export default function reducer(state = defaultState, action) {
         aboutMeAppOpen: true
       }
     case CLOSE_APP:
-      var copy = state.openApps;
-      var index = copy.indexOf(action.display);
-      if (index != -1) {
+      let copy = state.openApps;
+      let index = copy.indexOf(action.display);
+      if (index !== -1) {
         copy.splice(index, 1);
       }
-      var aboutMeAppOpen = true;
+      let aboutMeAppOpen = true;
       if (action.display === DISPLAY_TYPE.ABOUT_ME) {
         aboutMeAppOpen = false;
       }

@@ -11,8 +11,10 @@ import { Zoom } from 'react-reveal';
 import HomeScreen from './HomeScreen';
 import RecentsScreen from './RecentsScreen';
 import IosBottomBar from './IosBottomBar';
+import CreditsApp from './CreditsApp';
 
 class Screen extends Component {
+
   showHome = () => {
     this.props.dispatch(dispatchHome());
   }
@@ -45,11 +47,14 @@ class Screen extends Component {
         case DISPLAY_TYPE.RECENTS:
           ret = <RecentsScreen/>;
           break;
+        case DISPLAY_TYPE.CREDITS:
+          ret = <CreditsApp/>;
+          break;
         default:
           ret = <HomeScreen/>;
           break;
       }
-    if (this.props.display != DISPLAY_TYPE.HOME && this.props.display != DISPLAY_TYPE.RECENTS) {
+    if (this.props.display !== DISPLAY_TYPE.HOME && this.props.display !== DISPLAY_TYPE.RECENTS) {
       ret = <Zoom duration={250}>
         <div className='FillHeight'>
           {ret}

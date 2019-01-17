@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
-import { CardContent, Button, CardHeader, Typography, CardActions, IconButton, Collapse, List, ListItem, ListItemText } from '@material-ui/core';
+import { CardContent, CardHeader, IconButton, Collapse } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 class ProjectCard extends Component {
 
@@ -20,7 +20,7 @@ class ProjectCard extends Component {
 
     render() {
         var listItems = this.props.points ? this.props.points.map(function(info, index) {
-            return <li className='ExperiencePoint'>{info}</li>
+            return <li key={info} className='ExperiencePoint'>{info}</li>
         }) : null;
         var icon = listItems === null ? null :
             <IconButton

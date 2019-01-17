@@ -20,7 +20,12 @@ class RecentAppHeader extends Component {
                     }
                 >{this.props.name}</span>
                 <div className='CloseRecentApp' onClick={this.props.onClose}>
-                    <Close/>
+                    <Close 
+                    style = {
+                        {
+                            color: this.props.closeColor == null ? '#000000' : this.props.closeColor,
+                        }
+                    }/>
                 </div>
             </div>
         );

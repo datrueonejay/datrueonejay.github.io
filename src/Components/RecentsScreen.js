@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { DISPLAY_TYPE, dispatchAboutMe, dispatchProjects, dispatchInterests, dispatchCloseAboutMe, dispatchCloseProjects, dispatchCloseInterests } from '../Redux/Actions/actionConstants';
+import { DISPLAY_TYPE, dispatchAboutMe, dispatchProjects, dispatchInterests, dispatchCloseAboutMe, dispatchCloseProjects, dispatchCloseInterests, dispatchCloseCredits } from '../Redux/Actions/actionConstants';
 import ProjectsApp from './ProjectsApp';
 import InterestsApp from './ExperienceApp';
 import HomeScreen from './HomeScreen';
 import AboutMeApp from './AboutMeApp';
 import { Zoom } from 'react-reveal';
 import RecentAppHeader from './RecentAppHeader';
+import CreditsApp from './CreditsApp';
 
 class RecentsScreen extends Component {
 
@@ -37,7 +38,11 @@ class RecentsScreen extends Component {
     closeInterests = () => {
         this.props.dispatch(dispatchCloseInterests());
         this.forceUpdate();
+    }
 
+    closeCredits = () => {
+        this.props.dispatch(dispatchCloseCredits());
+        this.forceUpdate();
     }
 
     render() {
@@ -47,17 +52,19 @@ class RecentsScreen extends Component {
         var meClose = this.closeAboutMe;
         var projClose = this.closeProjects;
         var intClose = this.closeInterests;
-
+        var creditsClose = this.closeCredits;
         var listItems = this.props.openApps.map(function(app, index) {
         var ret;
         switch (app) {
             case DISPLAY_TYPE.ABOUT_ME:
                 ret = <div className='FillHeight'>
                     <RecentAppHeader icon={require('../images/aboutMe.png')} 
-                        name='About Me' 
+                        name='Who Am I' 
                         onClose={meClose}
-                        color='#FF7E2D'/>
-                    <AboutMeApp className='' onClick={me}/>
+                        color='#011f4b'
+                        textColor="white"
+                        closeColor="white"/>
+                    <AboutMeApp onClick={me}/>
                     </div>;
                 break;
             case DISPLAY_TYPE.PROJECTS_APP:
@@ -65,24 +72,36 @@ class RecentsScreen extends Component {
                     <RecentAppHeader icon={require('../images/projects.png')} 
                         name='Projects' 
                         onClose={projClose}
-                        color='#4BAAF4'/>
-                    <ProjectsApp className='' onClick={proj}/></div>;
+                        color='#00EECF'/>
+                    <ProjectsApp onClick={proj}/></div>;
                 break;
             case DISPLAY_TYPE.INTERESTS_APP:
                 ret = <div className='FillHeight'>
                     <RecentAppHeader icon={require('../images/experience.png')} 
-                        name='Interests' 
+                        name='Experience' 
                         onClose={intClose}
                         color='#000000'
-                        textColor='#FFFFFF'/>
-                    <InterestsApp className='' onClick={int}/>
+                        textColor='#FFFFFF'
+                        closeColor="white"/>
+                    <InterestsApp onClick={int}/>
+                </div>;
+                break;
+            case DISPLAY_TYPE.CREDITS:
+                ret = <div className='FillHeight'>
+                    <RecentAppHeader icon={require('../images/copyright.png')} 
+                        name='Credits' 
+                        onClose={creditsClose}
+                        color='#000000'
+                        textColor='#FFFFFF'
+                        closeColor="white"/>
+                    <CreditsApp className='' onClick={int}/>
                 </div>;
                 break;
             default:
                 ret = <HomeScreen className='RecentsApp'/>;
                 break;
             }
-        return <div className='RecentsApp'>{ret}</div>;
+        return <div className='RecentsApp' key={app}>{ret}</div>;
         });
         if (listItems.length === 0) {
             listItems = [<div className='NoRecents'>NO RECENT APPS!</div>]

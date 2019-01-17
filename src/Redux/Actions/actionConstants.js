@@ -17,10 +17,7 @@ export const DISPLAY_TYPE = {
   PROJECTS_APP: "PROJECTS_APP",
   INTERESTS_APP: "INTERESTS_APP",
   RECENTS: "RECENTS",
-}
-const APP_NAME = {
-  ABOUT_ME: "ABOUT_ME",
-  PROJECTS: "PROJECTS",
+  CREDITS: "CREDITS",
 }
 export const OS = {
   DROID: 'DROID',
@@ -67,6 +64,12 @@ export function dispatchRecents() {
   }
 }
 
+export function dispatchCredits() {
+  return {
+    type: SET_DISPLAY,
+    display: DISPLAY_TYPE.CREDITS
+  }
+}
 export function dispatchOpenAboutMe() {
   return {
     type: OPEN_ABOUT_ME
@@ -98,7 +101,12 @@ export function dispatchCloseTexting() {
     display: DISPLAY_TYPE.TEXT_APP
   }
 }
-
+export function dispatchCloseCredits() {
+  return {
+    type: CLOSE_APP,
+    display: DISPLAY_TYPE.CREDITS
+  }
+}
 export function dispatchSetDroid() {
   return {
     type: SET_OS,

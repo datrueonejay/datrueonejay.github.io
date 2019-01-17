@@ -50,19 +50,19 @@ class ProjectsApp extends Component {
             <div className='ProjectsApp MobileApp' onClick={this.props.onClick}>
                 {/* <h1>Projects</h1> */}
                 <ProjectCard title="Dinder Mobile Application" icon={require('../images/dinder.png')}
-                    description={dinderDescription} tech='React Native, Node.js, Redux, Zomato API'
+                    description={dinderDescription} 
                     buttons={[dinderFront, dinderBack]}/>
-                <ProjectCard title="Reports WorkBench" icon={require('../images/dinder.png')}
-                    description={workbenchDescription} tech='Java, Node.js, MongoDB'
+                <ProjectCard title="Reports WorkBench" icon={require('../images/workbench.png')}
+                    description={workbenchDescription} 
                     buttons={[workbench, workbenchvid]}/>  
                 <ProjectCard title="Littler Fingers Android Application" icon={require('../images/littleFingers.png')}
-                    description={littleFingersDescription} tech='Java'
+                    description={littleFingersDescription}
                     buttons={[littleFingers]}/>    
-                <ProjectCard title="Personal Website" icon={require('../images/dinder.png')}
-                    description={websiteDescription} tech='React, Redux'
+                <ProjectCard title="Personal Website" icon={require('../images/icon.png')}
+                    description={websiteDescription} 
                     buttons={[website]}/>  
                 <ProjectCard title="Sequence Android Application" icon={require('../images/sequence.png')}
-                    description={sequenceDescription} tech='Java'
+                    description={sequenceDescription} 
                     buttons={[sequence, sequencePlayStore]}/>  
             </div>
             

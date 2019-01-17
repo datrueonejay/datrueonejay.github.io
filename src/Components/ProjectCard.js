@@ -6,7 +6,7 @@ import { CardContent, Button } from '@material-ui/core';
 class ProjectCard extends Component {
     render() {
         var listItems = this.props.buttons ? this.props.buttons.map(function(info, index) {
-            return <div><Button href={info.link} target='_blank' className='ProjectBtn'>{info.text}</Button></div>
+            return <div key={info.link}><Button href={info.link} target='_blank' className='ProjectBtn'>{info.text}</Button></div>
         }) : null;
         return (    
             <Card className="ProjectCard">
@@ -18,7 +18,7 @@ class ProjectCard extends Component {
                                 {this.props.description}
                             </div>
                             <div>
-                                Built using {this.props.tech}.
+                                {this.props.tech === undefined ? undefined : `Built using ${this.props.tech}.`}
                             </div>
                             {listItems}
 

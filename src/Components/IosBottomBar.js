@@ -17,7 +17,7 @@ export default class IosBottomBar extends Component {
                 setTimeout(
                     () => {
                         if (!this.state.doubleClick) {
-                            {this.props.onSingleClick()}
+                            this.props.onSingleClick();
                         }
                         this.setState(s => {
 
@@ -38,7 +38,7 @@ export default class IosBottomBar extends Component {
                 
                 )
             }
-            {this.props.onDoubleClick()}
+            this.props.onDoubleClick();
             return {
                 ...state,
                 doubleClick: true
@@ -50,7 +50,7 @@ export default class IosBottomBar extends Component {
     render() {
         return(
         <div className='Navbar IosBar'>
-        <img className='IosBarButton' onClick={this.click} src={require('../images/iosHome.png')}/>
+        <img className='IosBarButton' alt='home' onClick={this.click} src={require('../images/iosHome.png')}/>
 
         </div>
         );
