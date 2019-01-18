@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { Button, ButtonBase } from '@material-ui/core';
+import { ButtonBase } from '@material-ui/core';
 
 export default class Navbar extends Component {
   render() {
