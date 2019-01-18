@@ -59,7 +59,7 @@ class RecentsScreen extends Component {
             case DISPLAY_TYPE.ABOUT_ME:
                 ret = <div className='FillHeight'>
                     <RecentAppHeader icon={require('../images/aboutMe.png')} 
-                        name='Who Am I' 
+                        name='Who?' 
                         onClose={meClose}
                         color='#011f4b'
                         textColor="white"

@@ -9,7 +9,7 @@ const dinderFront = {
 }
 const dinderBack = {
     link: 'https://github.com/UseLess-Apps/DinderAPI',
-    text: 'See Front Back End on Github'
+    text: 'See Back End on Github'
 }
 
 const littleFingersDescription = 'An android application, used to disable input to the screen.'

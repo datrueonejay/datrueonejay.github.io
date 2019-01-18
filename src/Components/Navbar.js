@@ -8,17 +8,15 @@ export default class Navbar extends Component {
       <Container fluid className='Navbar'>
         <Row className='Navbar'>
         <Col xs='4' className='NavBarItem' onClick={this.props.onBack}>
-          <Button className='whiteRipple' fullWidth={true} tabIndex='-1'>
             <img className='NavBarButton' alt='back button' id='Back' src={require('../images/back.png')}/>
-          </Button>
         </Col>
         <Col xs='4' className='NavBarItem' onClick={this.props.onHome}>
-          <Button className='whiteRipple' fullWidth={true}  tabIndex='-1'>
+          <Button className='whiteRipple' tabIndex='-1' fullWidth>
             <img className='NavBarButton' alt='home button' id='Home' src={require('../images/home.png')}/>
           </Button>
         </Col>
         <Col xs='4' className='NavBarItem' onClick={this.props.onRecents}>
-          <Button className='whiteRipple' fullWidth={true}  tabIndex='-1'>
+          <Button className='whiteRipple' tabIndex='-1' fullWidth>
             <img className='NavBarButton' alt='recents button' id='Recents' src={require('../images/recent.png')}/>
           </Button>
         </Col>

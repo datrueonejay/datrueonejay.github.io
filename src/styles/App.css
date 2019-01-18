@@ -87,8 +87,8 @@ body {
 
 .DockIconAnchor {
   margin: 0 10px;
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,8 +119,8 @@ body {
 }
 
 .AppIconAnchor {
-  width: 70px;
-  height: 70px;
+  width: 48px;
+  height: 48px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -9,7 +9,7 @@ class Navbar extends Component {
     super(props);
     this.droidBar = 
     <div className='StatusBar'>
-      <div className='Name'>Jayden Arquelada</div>
+      <div className='Name'>Jayden</div>
       <div className='Icons'>
         <img className='StatusBarIcon' alt="wifi icon" src={require('../images/wifi.png')}/>
         <img className='StatusBarIcon' alt="cellular icon" src={require('../images/cellular.png')}/>
@@ -21,7 +21,7 @@ class Navbar extends Component {
     this.iOSBar = 
     <div className='IosStatusBar'>
         <img className='StatusBarIcon' alt="cellular icon" src={require('../images/cellular.png')}/>
-        <div className='Name'>Jayden Arquelada</div>
+        <div className='Name'>Jayden</div>
         <img className='StatusBarIcon' alt="wifi icon" src={require('../images/wifi.png')}/>
         <Clock className='StatusBarIcon IosTimeIcon' format={'h:mm'} ticking={true} timezone={'Canada/Eastern'} />
         <img className='StatusBarIcon IosBattery' alt="battery icon" src={require('../images/battery.png')}/>

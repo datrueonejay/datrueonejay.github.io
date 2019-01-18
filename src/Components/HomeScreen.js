@@ -36,7 +36,7 @@ class HomeScreen extends Component {
                 <div className='AppRow'>
                     <MobileApp icon={ this.props.os === OS.DROID ? 
                     require('../images/aboutMe.png') :
-                    require('../images/aboutMeIOS.png')} name='Who Am I' onClick={this.showAboutMe}/>
+                    require('../images/aboutMeIOS.png')} name='Who?' onClick={this.showAboutMe}/>
                     <MobileApp icon={ this.props.os === OS.DROID ? 
                         require('../images/projects.png') :
                         require('../images/projectsIOS.png')} name='Projects' onClick={this.showProjects}/>
