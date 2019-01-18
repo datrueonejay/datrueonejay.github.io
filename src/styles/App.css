@@ -342,6 +342,9 @@ body {
 .whiteRipple {
   color: rgb(255, 255, 255) !important;
   border-radius: 100px !important;
+  width: 100%;
+  height: 100%;
+  outline: none !important; 
 }
 
 .ProjectCardContent {
@@ -373,7 +376,6 @@ body {
 .ExperienceApp {
   background-color: black;
 }
-
 .ExperienceCard {
   border-radius: 0px !important;
 }
@@ -430,8 +432,9 @@ body {
   padding: 10px;
 }
 
-.ExapndBtn {
+.ExpandBtn {
   float: right !important;
+  outline: none !important;
 }
 
 .ExperiencePoints {

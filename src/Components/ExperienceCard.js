@@ -25,7 +25,7 @@ class ProjectCard extends Component {
         var icon = listItems === null ? null :
             <IconButton
                 onClick={this.expandCard}
-                className='ExapndBtn'
+                className='ExpandBtn'
             >
             <ExpandMoreIcon/>
         </IconButton>
