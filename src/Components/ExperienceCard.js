@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
 import { CardContent, CardHeader, IconButton, Collapse } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+
 class ProjectCard extends Component {
 
     constructor(props) {
@@ -27,7 +29,7 @@ class ProjectCard extends Component {
                 onClick={this.expandCard}
                 className='ExpandBtn'
             >
-            <ExpandMoreIcon/>
+            {!this.state.expanded ? <ExpandMoreIcon/> : <ExpandLessIcon/> }
         </IconButton>
         return (    
             <Card className="ExperienceCard">

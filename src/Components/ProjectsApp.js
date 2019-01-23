@@ -44,11 +44,15 @@ const workbenchvid = {
     text: 'See demo on Youtube'
 }
 
+const bankDesc = 'An android application developed for a school project, simulating an offline banking application.'
+const bank = {
+    link: 'https://github.com/datrueonejay/BigBoiBank',
+    text: 'See on Github'
+}
 class ProjectsApp extends Component {
     render() {
         return (    
             <div className='ProjectsApp MobileApp' onClick={this.props.onClick}>
-                {/* <h1>Projects</h1> */}
                 <ProjectCard title="Dinder Mobile Application" icon={require('../images/dinder.png')}
                     description={dinderDescription} 
                     buttons={[dinderFront, dinderBack]}/>
@@ -61,6 +65,9 @@ class ProjectsApp extends Component {
                 <ProjectCard title="Personal Website" icon={require('../images/icon.png')}
                     description={websiteDescription} 
                     buttons={[website]}/>  
+                <ProjectCard title="BigBoiBank Android Application" icon={require('../images/bankIcon.png')}
+                    description={bankDesc} 
+                    buttons={[bank]}/>
                 <ProjectCard title="Sequence Android Application" icon={require('../images/sequence.png')}
                     description={sequenceDescription} 
                     buttons={[sequence, sequencePlayStore]}/>  
