@@ -3,7 +3,7 @@ import DockApp from './DockApp';
 import { OS } from '../Redux/Actions/actionConstants';
 import { connect } from 'react-redux';
 
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+// var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
 class Dock extends Component {
   render() {
@@ -17,7 +17,7 @@ class Dock extends Component {
           require('../images/linkedInIOS.png')} link='https://www.linkedin.com/in/jayden-arquelada-b70186111/'/>
         <DockApp icon={this.props.os === OS.DROID ? 
           require('../images/resume.png') :
-          require('../images/resumeIOS.png')} link={require('../assets/resume.pdf')} download={isChrome}/>
+          require('../images/resumeIOS.png')} link={require('../assets/resume.pdf')} />
         <DockApp icon={this.props.os === OS.DROID ? 
           require('../images/contact.png') :
           require('../images/contactIOS.png')}  link="mailto:jayden.arquelada@mail.utoronto.ca" target='_top'/>
