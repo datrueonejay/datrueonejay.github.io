@@ -49,6 +49,17 @@ const bank = {
     link: 'https://github.com/datrueonejay/BigBoiBank',
     text: 'See on Github'
 }
+
+const foodForThoughtDesc = 'A web application developed during a hackathon, where users can upload photos of ingredients and find recipes based on them.'
+const foodForThoughtGithub = {
+    link: 'https://github.com/HTV-FoodForThought/HTV-FoodForThought.github.io',
+    text: 'See on Github'
+}
+const foodForThought = { 
+    link: 'https://pbj-foodforthought.com/',
+    text: 'See project'
+}
+
 class ProjectsApp extends Component {
     render() {
         return (    
@@ -59,6 +70,9 @@ class ProjectsApp extends Component {
                 <ProjectCard title="Reports WorkBench" icon={require('../images/workbench.png')}
                     description={workbenchDescription} 
                     buttons={[workbench, workbenchvid]}/>  
+                <ProjectCard title="Food for Thought" icon={require('../images/foodForThought.png')}
+                    description={foodForThoughtDesc}
+                    buttons={[foodForThought, foodForThoughtGithub]}/>
                 <ProjectCard title="Littler Fingers Android Application" icon={require('../images/littleFingers.png')}
                     description={littleFingersDescription}
                     buttons={[littleFingers]}/>    
