@@ -17,7 +17,7 @@ class Dock extends Component {
           require('../images/linkedInIOS.png')} link='https://www.linkedin.com/in/jayden-arquelada-b70186111/'/>
         <DockApp icon={this.props.os === OS.DROID ? 
           require('../images/resume.png') :
-          require('../images/resumeIOS.png')} link={require('../assets/resume.pdf')} />
+          require('../images/resumeIOS.png')} link={require('../assets/JaydenArqueladaResume.pdf')} />
         <DockApp icon={this.props.os === OS.DROID ? 
           require('../images/contact.png') :
           require('../images/contactIOS.png')}  link="mailto:jayden.arquelada@mail.utoronto.ca" target='_top'/>
