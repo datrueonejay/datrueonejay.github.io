@@ -5,7 +5,7 @@ import ExperienceCard from './ExperienceCard';
 const curr = {
     title: 'Currently Searching for an Internship',
     date: 'Winter 2020 or Summer 2020',
-    intro: 'Looking to work as a backend/cloud developer next year'
+    intro: 'Looking to work as a back-end/cloud developer next year'
 }
 
 const TA = {

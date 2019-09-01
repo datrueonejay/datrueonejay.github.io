@@ -17,7 +17,7 @@ class AboutMeApp extends Component {
             <div className={'AboutMeApp MobileApp'} onClick={this.props.onClick}>
                 <div>Hey, I'm Jayden Arquelada.{' '}<img className='AboutMePic' alt='Jayden' src={require('../images/me.png')}/>
                 I am a third year computer science student, specializing in software engineering at UofT.{' '}
-                I love learning new things, and have a keen interest in mobile development.{' '}
+                I love learning new things, and have a keen interest in back-end, and mobile development, as well as cloud computing.{' '}
                 I also love listening to and playing music, hanging out with friends, and gaming.{' '}
                 I am passionate individual, ready to learn and work within a fast-paced environment.{' '}
                 </div>
