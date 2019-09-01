@@ -1,21 +1,10 @@
 {
-  "files": {
-    "main.css": "/static/css/main.a85d5f5c.chunk.css",
-    "main.js": "/static/js/main.e1aaf64c.chunk.js",
-    "main.js.map": "/static/js/main.e1aaf64c.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.d12dfcf3.js",
-    "runtime~main.js.map": "/static/js/runtime~main.d12dfcf3.js.map",
-    "static/css/2.266e55a5.chunk.css": "/static/css/2.266e55a5.chunk.css",
-    "static/js/2.efa7d920.chunk.js": "/static/js/2.efa7d920.chunk.js",
-    "static/js/2.efa7d920.chunk.js.map": "/static/js/2.efa7d920.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9a5a6b03a4e950751afe239e06bd0ef6.js": "/precache-manifest.9a5a6b03a4e950751afe239e06bd0ef6.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.a85d5f5c.chunk.css.map": "/static/css/main.a85d5f5c.chunk.css.map",
-    "static/media/JaydenArqueladaResume.pdf": "/static/media/JaydenArqueladaResume.be118873.pdf",
-    "static/media/bankIcon.png": "/static/media/bankIcon.de119c05.png",
-    "static/media/App.css": "/static/media/droidBackground.854d1040.jpg",
-    "static/media/foodForThought.png": "/static/media/foodForThought.cb836423.png"
-  }
+  "main.css": "static/css/main.5a31fd90.css",
+  "main.css.map": "static/css/main.5a31fd90.css.map",
+  "main.js": "static/js/main.cd3295c2.js",
+  "main.js.map": "static/js/main.cd3295c2.js.map",
+  "static/media/JaydenArqueladaResume.pdf": "static/media/JaydenArqueladaResume.be118873.pdf",
+  "static/media/bankIcon.png": "static/media/bankIcon.de119c05.png",
+  "static/media/droidBackground.jpg": "static/media/droidBackground.854d1040.jpg",
+  "static/media/foodForThought.png": "static/media/foodForThought.cb836423.png"
 }
