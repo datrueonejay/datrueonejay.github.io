@@ -4,8 +4,8 @@ import ExperienceCard from './ExperienceCard';
 
 const curr = {
     title: 'Currently Searching for an Internship',
-    date: 'Summer 2019',
-    intro: 'Looking to work as a developer this Summer'
+    date: 'Winter 2020 or Summer 2020',
+    intro: 'Looking to work as a backend/cloud developer next year'
 }
 
 const TA = {
@@ -24,9 +24,21 @@ const auto = {
     date: 'September 2017 - April 2018', 
     intro: 'Worked as an Automation Developer at Fleet Complete',
     points: [
-        'Automated and executed front end Android, iOS, web and unit tests, using automation frameworks such as Xamarin UI test, and Selenium to ensure applications ran as expected',
+        'Automated and executed front end Android, iOS, web and unit tests, using automation frameworks such as Xamarin UI test and Selenium, reducing the amount of manual testing required before releases',
         'Developed integration tests for API end points, ensuring new deployments did not break existing API’s, and broken end points could be easily found',
         'Demonstrated ability to collaborate well with my team, practicing scrum methodology, ensuring quality work was delivered after each sprint',
+    ]
+}
+
+const architech = {
+    title: 'Co-op Software Engineer',
+    date: 'May 2019 - August 2019',
+    intro: 'Researched technoogy and developed applications at Architech',
+    points: [
+        'Worked on a conversational project using Google Dialogflow, Google Actions, Firebase (Cloud Firestore & Cloud Functions), and Node.js',
+        'Researched platforms and tools, including cross platform mobile development (Flutter, React Native, & Ionic), as well as Docker and Kubernetes, preparing applications and technical papers for the company',
+        'Worked on a web application for the company’s 15-year event to capture user responses in an application built with Node.js, React, and MongoDB',
+        'Built and deployed a proof of concept, using machine learning (scikit-learn and SciPy) to predict the most efficient configuration of a production line'
     ]
 }
 
@@ -34,24 +46,30 @@ class ExperienceApp extends Component {
     render() {
         return(
             <div className='ExperienceApp MobileApp' onClick={this.props.onClick}>
-             <ExperienceCard 
-                title={curr.title}
-                date={curr.date}
-                intro={curr.intro}
-            />
-            <ExperienceCard 
-                title={TA.title}
-                date={TA.date}
-                intro={TA.intro}
-                points={TA.points}
+                <ExperienceCard
+                    title={curr.title}
+                    date={curr.date}
+                    intro={curr.intro}
                 />
-            <ExperienceCard 
-                title={auto.title}
-                date={auto.date}
-                intro={auto.intro}
-                points={auto.points}
+                <ExperienceCard 
+                    title={architech.title}
+                    date={architech.date}
+                    intro={architech.intro}
+                    points={architech.points}
                 />
-        </div>
+                <ExperienceCard 
+                    title={TA.title}
+                    date={TA.date}
+                    intro={TA.intro}
+                    points={TA.points}
+                    />
+                <ExperienceCard 
+                    title={auto.title}
+                    date={auto.date}
+                    intro={auto.intro}
+                    points={auto.points}
+                    />
+            </div>
         );
     }
 }
