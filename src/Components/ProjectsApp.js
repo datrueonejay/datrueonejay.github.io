@@ -60,13 +60,28 @@ const foodForThought = {
     text: 'See project'
 }
 
+const codellaborateDesc = 'A web application built allowing users to collectively edit, view and run python code in real time.'
+const codellaborateGithub = {
+    link: 'https://github.com/datrueonejay/code-llaborate',
+    text: 'See on Github'
+}
+const codellaborate = {
+    link: 'https://code-llaborate.tools',
+    text: 'See project'
+}
+
+const codellaborateDemo = {
+    link: 'https://youtu.be/clVe42xD5Hc',
+    text: 'See Demo on Youtube'
+}
+
 class ProjectsApp extends Component {
     render() {
         return (    
             <div className='ProjectsApp MobileApp' onClick={this.props.onClick}>
-                <ProjectCard title="Dinder Mobile Application" icon={require('../images/dinder.png')}
-                    description={dinderDescription} 
-                    buttons={[dinderFront, dinderBack]}/>
+                <ProjectCard title="Code-llaborate Web Application" icon={require('../images/code-llaborate.png')}
+                    description={codellaborateDesc}
+                    buttons={[codellaborate, codellaborateDemo, codellaborateGithub]}/>
                 <ProjectCard title="Reports WorkBench" icon={require('../images/workbench.png')}
                     description={workbenchDescription} 
                     buttons={[workbench, workbenchvid]}/>  
@@ -90,5 +105,10 @@ class ProjectsApp extends Component {
         );
     }
 }
+
+
+{/* <ProjectCard title="Dinder Mobile Application" icon={require('../images/dinder.png')}
+description={dinderDescription} 
+buttons={[dinderFront, dinderBack]}/> */}
 
 export default connect()(ProjectsApp);
