@@ -20,7 +20,7 @@ class Dock extends Component {
           require('../images/resumeIOS.png')} link={require('../assets/JaydenArqueladaResume.pdf')} />
         <DockApp icon={this.props.os === OS.DROID ? 
           require('../images/contact.png') :
-          require('../images/contactIOS.png')}  link="mailto:jayden.arquelada@mail.utoronto.ca" target='_top'/>
+          require('../images/contactIOS.png')}  link="mailto:jayarquelada@gmail.com" target='_top'/>
       </div>
     );
   }

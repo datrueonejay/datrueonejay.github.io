@@ -11,7 +11,7 @@ export default class ContactMeApp extends Component {
         <div className='ContactInfoContainer ContactHalf'>
           <div className='ContactEmail ContactInfo'>
             <img alt='email' src={require('../images/email.png')} className='ContactIcon'/>
-            jayden.arquelada@mail.utoronto.ca<br/>
+            jayarquelada@gmail.com<br/>
             Email
           </div>
         </div>
