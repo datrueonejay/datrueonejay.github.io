@@ -7,15 +7,22 @@ const curr = {
   intro: "Looking to work as a back-end/cloud developer",
 };
 
+const cbear = {
+  title: "Software Engineer at CommerceBear ⚡",
+  date: "September 2020 - Present",
+  intro: "Effortless ecommerce built for the furniture industry, powering you to sell on Wayfair, Overstock, Amazon, and more ✨"
+}
+
 const TA = {
   title: "Teaching Assistant",
-  date: "September 2018 - December 2018",
+  date: "September 2018 - August 2020",
   intro:
-    "Worked as a Teaching Assistant at the University of Toronto for Introduction to Computer Science",
+    "Worked as a Teaching Assistant at the University of Toronto for Introduction to Computer Science and Operating Systems",
   points: [
-    "Helped a class of over 75 students understand concepts and work through worksheets related to course concepts weekly",
-    "Answered questions on an online discussion forum",
-    "Held office hours to provide additional assistance for coursework understanding course materials, and preparation for tests",
+    "Help students understand OS concepts such as synchronization, user programs, and virtual memory, through the operating system framework Pintos",
+    "Guided students through Computer Science fundamentals such as data types, control flow, sorting, and time complexity",
+    "Helped a class of over 75 students understand core concepts and work through worksheets related to course concepts weekly",
+    "Held office hours to provide additional assistance for coursework, understanding course materials, and preparation for tests",
   ],
 };
 
@@ -47,21 +54,21 @@ class ExperienceApp extends Component {
     return (
       <div className="ExperienceApp MobileApp" onClick={this.props.onClick}>
         <ExperienceCard
-          title={curr.title}
-          date={curr.date}
-          intro={curr.intro}
-        />
-        <ExperienceCard
-          title={architech.title}
-          date={architech.date}
-          intro={architech.intro}
-          points={architech.points}
+          title={cbear.title}
+          date={cbear.date}
+          intro={cbear.intro}
         />
         <ExperienceCard
           title={TA.title}
           date={TA.date}
           intro={TA.intro}
           points={TA.points}
+        />
+        <ExperienceCard
+          title={architech.title}
+          date={architech.date}
+          intro={architech.intro}
+          points={architech.points}
         />
         <ExperienceCard
           title={auto.title}
