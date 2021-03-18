@@ -74,11 +74,6 @@ const codellaborateGithub = {
   link: "https://github.com/datrueonejay/code-llaborate",
   text: "See on Github",
 };
-const codellaborate = {
-  link: "https://code-llaborate.tools",
-  text: "See project",
-};
-
 const codellaborateDemo = {
   link: "https://youtu.be/clVe42xD5Hc",
   text: "See Demo on Youtube",
@@ -99,7 +94,7 @@ class ProjectsApp extends Component {
           title="Code-llaborate Web Application"
           icon={require("../images/code-llaborate.png")}
           description={codellaborateDesc}
-          buttons={[codellaborate, codellaborateDemo, codellaborateGithub]}
+          buttons={[codellaborateDemo, codellaborateGithub]}
         />
         <ProjectCard
           title="Instant Indulgence (In progress)"
