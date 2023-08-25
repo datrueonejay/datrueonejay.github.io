@@ -12,14 +12,6 @@ class Dock extends Component {
         <DockApp
           icon={
             this.props.os === OS.DROID
-              ? require("../images/youtube.png")
-              : require("../images/youtubeIOS.png")
-          }
-          link="https://www.youtube.com/channel/UCDAA0AZRunZ5-NY5H1np2pw"
-        />
-        <DockApp
-          icon={
-            this.props.os === OS.DROID
               ? require("../images/github.png")
               : require("../images/githubIOS.png")
           }

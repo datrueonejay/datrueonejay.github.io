@@ -2,17 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProjectCard from "./ProjectCard";
 
-const dinderDescription =
-  "A mobile application, used to find food places around you, based on categories you select.";
-const dinderFront = {
-  link: "https://github.com/UseLess-Apps/Dinder",
-  text: "See Front End on Github",
-};
-const dinderBack = {
-  link: "https://github.com/UseLess-Apps/DinderAPI",
-  text: "See Back End on Github",
-};
-
 const littleFingersDescription =
   "An android application, used to disable input to the screen.";
 const littleFingers = {
@@ -63,10 +52,6 @@ const foodForThoughtGithub = {
   link: "https://github.com/HTV-FoodForThought/HTV-FoodForThought.github.io",
   text: "See on Github",
 };
-const foodForThought = {
-  link: "https://pbj-foodforthought.com/",
-  text: "See project",
-};
 
 const codellaborateDesc =
   "A web application built allowing users to collectively edit, view and run python code in real time.";
@@ -79,13 +64,6 @@ const codellaborateDemo = {
   text: "See Demo on Youtube",
 };
 
-const foodDesc =
-  "A Google Assistant Application that finds restaurants near you based on selected cuisines.";
-const foodGithub = {
-  link: "https://github.com/datrueonejay/InstantIndulgence",
-  text: "See on Github",
-};
-
 class ProjectsApp extends Component {
   render() {
     return (
@@ -95,11 +73,6 @@ class ProjectsApp extends Component {
           icon={require("../images/code-llaborate.png")}
           description={codellaborateDesc}
           buttons={[codellaborateDemo, codellaborateGithub]}
-        />
-        <ProjectCard
-          title="Instant Indulgence (In progress)"
-          description={foodDesc}
-          buttons={[foodGithub]}
         />
         <ProjectCard
           title="Reports WorkBench"
@@ -140,12 +113,6 @@ class ProjectsApp extends Component {
       </div>
     );
   }
-}
-
-{
-  /* <ProjectCard title="Dinder Mobile Application" icon={require('../images/dinder.png')}
-description={dinderDescription} 
-buttons={[dinderFront, dinderBack]}/> */
 }
 
 export default connect()(ProjectsApp);

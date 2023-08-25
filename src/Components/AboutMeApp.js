@@ -21,13 +21,11 @@ class AboutMeApp extends Component {
             alt="Jayden"
             src={require("../images/me.png")}
           />
-          I am a recent (June 2020) Computer Science graduate from University of
-          Toronto, who specialized in Software Engineering. I love learning new
-          things, and have a keen interest in back-end, and mobile development,
-          as well as cloud computing. I also love listening to and playing
-          music, hanging out with friends, going to the gym, and gaming. I am
-          passionate individual, ready to learn and work within a fast-paced
-          environment.{" "}
+          I'm a software engineer, who has worked at different companies including startups and cloud providers.
+          I've worked on multiple aspects of the tech stack, including front-end, back-end, and infrastructure, with my primary
+          focus currently being back-end.
+          I love learning new things, tackling interesting problems, and working towards impactful solutions.
+          Outside of software engineering, good music and good food are things I enjoy and am always looking out for new ones to try!{" "}
         </div>
       </div>
     );
